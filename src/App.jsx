@@ -1,12 +1,11 @@
-import './App.css'
+import React from 'react'
+import Navbar from './Components/Navbar/Navbar'
 
-function App() {
+const App = () => {
   return (
-    <>
-      <p>
-        Lets start with the Finace website development
-      </p>
-    </>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
