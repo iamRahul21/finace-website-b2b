@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import './Navbar.scss'
 
 const Navbar = () => {
   return (
@@ -10,11 +10,12 @@ const Navbar = () => {
 
       <nav className="navbar">
         <a href="/">Home</a>
+        <a href="/">Services</a>
         <a href="/">Blog</a>
         <a href="/">About Us</a>
-        <a href="/">Team</a>
+        {/* <a href="/">Team</a>
         <a href="/">Mobile App</a>
-        <a href="/">FAQs</a>
+        <a href="/">FAQs</a> */}
         <a href="/">Book a demo</a> {/* need to add button style to this */}
       </nav>
     </header>

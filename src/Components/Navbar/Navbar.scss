@@ -1,0 +1,51 @@
+$text-color: black;
+$hover-transition-duration: 0.3s;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  .logo {
+    font-size: 32px;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .logo-image {
+    height: 50px; // Set the height
+    width: auto; // Maintain the aspect ratio
+  }
+
+  .navbar {
+    a {
+      position: relative;
+      font-size: 18px;
+      color: $text-color;
+      font-weight: 500;
+      margin-left: 40px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $text-color;
+        transition: width $hover-transition-duration;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
