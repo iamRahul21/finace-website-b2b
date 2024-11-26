@@ -1,5 +1,17 @@
+@use "sass:map";
+@use "sass:color";
+
 $text-color: black;
 $hover-transition-duration: 0.3s;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 868px, // originally 768
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 .header {
   position: fixed;
@@ -17,20 +29,57 @@ $hover-transition-duration: 0.3s;
     font-size: 32px;
     color: $text-color;
     font-weight: 700;
+    img {
+      height: 50px;
+      width: auto;
+    }
   }
 
-  .logo-image {
-    height: 50px; // Set the height
-    width: auto; // Maintain the aspect ratio
+  .burger-button {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+
+    span {
+      display: block;
+      height: 3px;
+      background: $text-color;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translateY(11px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-11px);
+      }
+    }
+
+    @media (max-width: map.get($grid-breakpoints, md)) {
+      display: flex;
+    }
   }
 
   .navbar {
+    display: flex;
+    align-items: center;
+
     a {
       position: relative;
       font-size: 18px;
       color: $text-color;
       font-weight: 500;
       margin-left: 40px;
+      text-decoration: none;
 
       &::before {
         content: '';
@@ -46,6 +95,77 @@ $hover-transition-duration: 0.3s;
       &:hover::before {
         width: 100%;
       }
+
+      &.button {
+        padding: 10px 20px;
+        background: $text-color;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+
+        &:hover {
+          background: color.adjust($text-color, $lightness: -10%);
+        }
+      }
+    }
+
+    @media (max-width: map.get($grid-breakpoints, md)) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10%;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 99;
+
+      &.active {
+        display: flex;
+      }
+
+      a {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: map.get($grid-breakpoints, sm)) {
+    padding: 10px 5%;
+    .logo {
+      font-size: 24px;
+    }
+    .navbar a {
+      font-size: 16px;
+      color: red;
+    }
+  }
+
+  @media (max-width: map.get($grid-breakpoints, lg)) {
+    padding: 15px 8%;
+    .logo {
+      font-size: 28px;
+    }
+    .navbar a {
+      font-size: 17px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: map.get($grid-breakpoints, xl)) {
+    padding: 15px 9%;
+    .navbar a {
+      font-size: 18px;
+      margin-left: 25px;
+    }
+  }
+
+  @media (min-width: map.get($grid-breakpoints, xxl)) {
+    .header {
+      padding: 20px 12%;
     }
   }
 }

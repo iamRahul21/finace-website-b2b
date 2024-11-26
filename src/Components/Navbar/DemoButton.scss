@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "sass:color";
+
+$color: #7DAC3E;
+$text-color: white;
+$hover-transition-duration: 0.3s;
+
+.demo-button {
+    background: $color;
+    color: $text-color;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+// have to add that shimmer effect later
