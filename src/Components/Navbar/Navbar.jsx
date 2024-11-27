@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
-import DemoButton from './DemoButton';
+import DemoButton from '../DemoButton/DemoButton';
 
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);

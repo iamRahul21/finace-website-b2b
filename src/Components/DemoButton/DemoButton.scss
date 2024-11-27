@@ -14,4 +14,9 @@ $hover-transition-duration: 0.3s;
     font-weight: 500;
 }
 
+.demo-button:hover {
+    // background-color: #6aac3e;
+    cursor: pointer;
+}
+
 // have to add that shimmer effect later
