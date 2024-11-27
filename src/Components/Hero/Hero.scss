@@ -1,0 +1,65 @@
+$text-color: #133453;
+$color: #7DAC3E;
+$button-text-color: white;
+
+.hero-section {
+    // background-color: red;
+    // border: 5px solid;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // padding: 10px;
+    width: 65%;  
+}
+
+.hero-para-1 {
+    // background-color: seagreen;
+    font-size: 80px;
+    line-height: 85px;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 40px;
+    color: $text-color;
+    height: inherit;
+}
+
+.underline {
+    // text-decoration: underline;
+    font-weight: 700;
+}
+
+.hero-para-2 {
+    background-color: seagreen;
+    font-size: 30px;
+    // line-height: 40px;
+    text-align: center;
+    font-weight: 400;
+    width: 75%;
+}
+
+.button {
+    // background-color: yellow;
+    display: flex;
+    gap: 3%;
+    justify-content: center;  
+}
+
+.get-started {
+    background: $button-text-color;
+    color: $color;
+    border: solid $color;
+    padding: 10px 15px;
+    border-radius: 25px;
+    // margin-left: 25px;
+    font-weight: 500;
+}
+
+.book-a-demo {
+    background: $color;
+    color: $button-text-color;
+    padding: 10px 15px;
+    border-radius: 25px;
+    // margin-left: 25px;
+    font-weight: 500;
+}
