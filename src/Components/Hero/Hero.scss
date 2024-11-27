@@ -41,7 +41,7 @@ $button-text-color: white;
 .button {
     // background-color: yellow;
     display: flex;
-    gap: 3%;
+    gap: 1%;
     justify-content: center;  
 }
 
@@ -55,11 +55,20 @@ $button-text-color: white;
     font-weight: 500;
 }
 
+.get-started:hover {
+    cursor: pointer;
+}
+
 .book-a-demo {
     background: $color;
     color: $button-text-color;
+    border: solid $color;
     padding: 10px 15px;
     border-radius: 25px;
     // margin-left: 25px;
     font-weight: 500;
+}
+
+.book-a-demo:hover {
+    cursor: pointer;
 }

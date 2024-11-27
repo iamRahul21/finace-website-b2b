@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.scss'
-import DemoButton from '../DemoButton/DemoButton'
 
 const Hero = () => {
     return (
