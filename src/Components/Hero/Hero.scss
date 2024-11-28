@@ -1,6 +1,26 @@
+@use "sass:map";
+@use "sass:color";
 $text-color: #133453;
 $color: #7DAC3E;
 $button-text-color: white;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 868px,
+    // originally 768
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+// Medium devices (tablets, 768px and up)
+// Large devices (desktops, 992px and up)
+// X-Large devices (large desktops, 1200px and up)
+// XX-Large devices (larger desktops, 1400px and up)
 
 .hero-section {
     // background-color: red;
@@ -10,7 +30,7 @@ $button-text-color: white;
     left: 50%;
     transform: translate(-50%, -50%);
     // padding: 10px;
-    width: 65%;  
+    width: 65%;
 }
 
 .hero-para-1 {
@@ -42,7 +62,8 @@ $button-text-color: white;
     // background-color: yellow;
     display: flex;
     gap: 1%;
-    justify-content: center;  
+    justify-content: center;
+    font-size: 15px;
 }
 
 .get-started {
@@ -71,4 +92,64 @@ $button-text-color: white;
 
 .book-a-demo:hover {
     cursor: pointer;
+}
+
+// Responsiveness
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+// Medium devices (tablets, 768px and up)
+// Large devices (desktops, 992px and up)
+// X-Large devices (large desktops, 1200px and up)
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: map.get($grid-breakpoints, xl)) {
+    .hero-para-1 {
+        font-size: 70px;
+        line-height: 75px;
+        // background: red;
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, lg)) {
+    .hero-para-1 {
+        font-size: 60px;
+        line-height: 65px;
+        // background: blue;
+    }
+
+    .hero-section {
+        top: 25%;
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, md)) {
+    .hero-para-1 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    .hero-section {
+        top: 25%;
+    }
+
+    .button {
+        // display: block;
+        // width: 30%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, sm)) {// 576 r tolot gelei etu hobo
+    .hero-para-1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, xs)) {
+    .hero-para-1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
 }

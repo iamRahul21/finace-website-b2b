@@ -1,7 +1,54 @@
+@use "sass:map";
+@use "sass:color";
+$text-color: #133453;
+$color: #7DAC3E;
+$button-text-color: white;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 868px,
+    // originally 768
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
 .phone {
     // border: solid black;
     position: absolute;
     top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+// Responsiveness
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+// Medium devices (tablets, 768px and up)
+// Large devices (desktops, 992px and up)
+// X-Large devices (large desktops, 1200px and up)
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: map.get($grid-breakpoints, xl)) {
+    
+}
+
+@media (max-width: map.get($grid-breakpoints, lg)) {
+    
+}
+
+@media (max-width: map.get($grid-breakpoints, md)) {
+    .phone {
+        display: none;
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, sm)) {// 576 r tolot gelei etu hobo
+    
+}
+
+@media (max-width: map.get($grid-breakpoints, xs)) {
+    
 }
