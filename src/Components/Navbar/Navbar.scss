@@ -20,8 +20,9 @@ $grid-breakpoints: (
   width: 100%;
   padding: 10px 14%;
   padding-top: 15px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
+  // background: rgba(255, 255, 255, 0.7);
+  // backdrop-filter: blur(5px);
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;

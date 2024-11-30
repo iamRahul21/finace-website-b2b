@@ -1,10 +1,53 @@
+@use "sass:color";
+
+$box-color: #E6FFE9;
+// $hover-color: color.scale($box-color, $lightness: -20%);
+$hover-color: #7DAC3E;
+$text-color: white;
+$hover-transition-duration: 0.6s;
+
 .features-section {
-    background-color: yellow;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 h1 {
-    color: green;
-    text-align: center;
-    font-size: 80px;
+  color: black;
+  text-align: center;
+  font-size: 80px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  width: 30%;
+  height: 70vh;
+  margin: 1%;
+  margin-left: 14%;
+  padding: 20px;
+  font-size: 30px;
+}
+
+ul li {
+  background: $box-color;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: black;
+  border: solid 1px;
+  height: 25%;
+  border-radius: 15px;
+
+  transition: transform $hover-transition-duration ease-in-out, background-color $hover-transition-duration ease-in-out, color $hover-transition-duration ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    background: $hover-color;
+    color: $text-color;
+    border: solid black 2px;
+  }
 }

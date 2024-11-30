@@ -16,6 +16,9 @@ const App = () => {
       <div id="page2">
         <Features />
       </div>
+      <div id="page3">
+        
+      </div>
     </div>
   )
 }
