@@ -3,7 +3,7 @@ import './Phone.scss'
 
 const Phone = () => {
   return (
-    <img src="public\assets\images\phone-mock-up.png" alt="Finace App" className='phone' style={{ height: "650px", width: "auto" }}/>
+    <img src="src\assets\images\phone-mock-up.png" alt="Finace App" className='phone' style={{ height: "650px", width: "auto" }}/>
   )
 }
 
