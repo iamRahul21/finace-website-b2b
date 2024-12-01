@@ -16,6 +16,7 @@ const Benefits = () => {
             <div className="sec">
                 <div className="div1">
                     <h3>Benefits for employers</h3>
+                    {/* have to add that balloon ribbon effect here later */}
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quos, possimus illo, doloribus est, quidem maxime architecto dolor non impedit optio velit consequuntur odit.</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, minus!</li>
