@@ -15,7 +15,7 @@ const App = () => {
       <div id="page1">
         <Navbar />
         <Hero />
-        <Phone />
+        {/* <Phone /> */}
       </div>
       <div id="page2">
         <Features />
