@@ -13,13 +13,13 @@ $hover-transition-duration: 0.6s;
   height: 100vh;
 }
 
-h1 {
+.features-heading {
   color: black;
   text-align: center;
   font-size: 80px;
 }
 
-ul {
+.features-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ ul {
   font-size: 30px;
 }
 
-ul li {
+.features-item {
   background: $box-color;
   display: flex;
   align-items: center;

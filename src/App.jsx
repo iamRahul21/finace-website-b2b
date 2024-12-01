@@ -1,9 +1,10 @@
 import React from 'react'
+import './app.css'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Phone from './Components/PhoneMockUp/Phone'
-import './app.css'
 import Features from './Components/Features/Features'
+import Advantages from './Components/Advantages/Advantages'
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         <Features />
       </div>
       <div id="page3">
-        
+        <Advantages />
       </div>
     </div>
   )
