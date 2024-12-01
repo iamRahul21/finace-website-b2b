@@ -9,6 +9,7 @@ import Steps from './Components/Steps/Steps'
 import Demo from './Components/Demo/Demo'
 import Benefits from './Components/Benefits/Benefits'
 import About from './Components/About/About'
+import Footer from './Components/Footer/Footer'
 
 const App = () => {
   return (
@@ -35,6 +36,15 @@ const App = () => {
       </div>
       <div id="page7">
         <About />
+      </div>
+      <div id="page8">
+ 
+      </div>
+      <div id="page9">
+ 
+      </div>
+      <div id="page10">
+        <Footer />
       </div>
     </div>
   )
