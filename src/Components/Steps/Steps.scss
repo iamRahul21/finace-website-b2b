@@ -1,0 +1,38 @@
+@use "sass:color";
+
+$box-color: #E6FFE9;
+// $hover-color: color.scale($box-color, $lightness: -20%);
+$hover-color: #7DAC3E;
+$text-color: white;
+$hover-transition-duration: 0.6s;
+
+.steps-section {
+    // background-color: red;
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+.steps-heading {
+    text-align: center;
+    font-size: 80px;
+}
+
+.steps-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+// .steps {
+//     background-color: #7DAC3E;
+//     align-items: center;
+//     // height: 60vh;
+//     margin-top: 5%;
+//     margin-right: 30px;
+//     padding: 20px;
+//     display: flex;
+// }
+
+// .texts {
+//     padding-right: 100px;
+// }

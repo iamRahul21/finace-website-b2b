@@ -1,0 +1,58 @@
+@use "sass:color";
+
+$box-color: #E6FFE9;
+// $hover-color: color.scale($box-color, $lightness: -20%);
+$hover-color: #7DAC3E;
+$text-color: white;
+$color: #7DAC3E;
+$background-color: #133453;
+$hover-background-color: #0c2a3a;
+$hover-transition-duration: 0.6s;
+
+.demo-section {
+    background-color: #7DAC3E;
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: $text-color;
+}
+
+.demo-h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.demo-h2 {
+    // font-size: 70px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+}
+
+.demo-p {
+    // font-size: 70px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.demo-btn {
+    display: inline-block;
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.demo-btn:hover {
+    background-color: $hover-background-color;
+}
