@@ -4,7 +4,7 @@ import './Footer.scss'
 const Footer = () => {
     return (
         <div className='Footer-section'>
-            <div className="Footer-item">© Copyright Finace. All Rights Reserved</div>
+            <div className="Footer-item">© Copyright Finace. <br /> All Rights Reserved</div>
             <div className="Footer-item">
                 <p>Download the mobile app now</p>
                 <div className='appstore'>
@@ -27,7 +27,6 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 

@@ -1,10 +1,13 @@
+$bg-color: #151414;
+$text-color: white;
+
 .Footer-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 7%;
-    // background-color: #333;
-    // color: w;
+    // background-color: $bg-color;
+    // color: $text-color;
     border-top: solid 1px;
 }
 
