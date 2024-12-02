@@ -11,6 +11,8 @@ import Benefits from './Components/Benefits/Benefits'
 import About from './Components/About/About'
 import Footer from './Components/Footer/Footer'
 import DemoPage from './Components/DemoPage/DemoPage'
+import AnimatedSVG from './Components/AnimatedSVG/AnimatedSVG'
+import Page8 from './Components/Page8/Page8'
 
 const App = () => {
   return (
@@ -39,10 +41,9 @@ const App = () => {
         <About />
       </div>
       <div id="page8">
-        <DemoPage />
+        <Page8 />
       </div>
       <div id="page9">
- 
       </div>
       <div id="page10">
         <Footer />
