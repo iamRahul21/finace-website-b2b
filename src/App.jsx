@@ -10,6 +10,7 @@ import Demo from './Components/Demo/Demo'
 import Benefits from './Components/Benefits/Benefits'
 import About from './Components/About/About'
 import Footer from './Components/Footer/Footer'
+import DemoPage from './Components/DemoPage/DemoPage'
 
 const App = () => {
   return (
@@ -38,7 +39,7 @@ const App = () => {
         <About />
       </div>
       <div id="page8">
- 
+        <DemoPage />
       </div>
       <div id="page9">
  
