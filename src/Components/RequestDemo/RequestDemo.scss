@@ -1,3 +1,43 @@
+.page-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.demo-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    align-self: flex-end;
+    box-sizing: border-box;
+}
+
+.svg-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    z-index: -100;
+}
+
 .demo-form-container {
     max-width: 900px;
     margin: 0 auto;
@@ -102,8 +142,8 @@ textarea:focus,
 }
 
 .submit-button {
-    align-self: flex-end;
-    margin-top: auto;
+    align-self: center;
+    margin-top: 10px;
     background-color: #78b057;
     color: white;
     border: none;
@@ -120,19 +160,76 @@ textarea:focus,
     background-color: #5c8d44;
 }
 
+/* Responsiveness */
 @media (max-width: 768px) {
-    .form-row,
-    .form-message {
-        flex-direction: column;
-        max-width: 100%;
+    .demo-form-container {
+        padding: 15px;
+        margin: 10% 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .form-row .form-group {
-        max-width: 100%;
+    .form-heading {
+        font-size: 32px;
+    }
+
+    .demo-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    textarea {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 120px;
     }
 
     .submit-button {
-        position: static;
-        align-self: center;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .svg-container {
+        height: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-form-container {
+        padding: 10px;
+        margin: 15% 5px;
+    }
+
+    .form-heading {
+        font-size: 28px;
+    }
+
+    .demo-form {
+        gap: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    textarea {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .submit-button {
+        padding: 8px 15px;
+        font-size: 12px;
     }
 }

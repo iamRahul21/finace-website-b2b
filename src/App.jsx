@@ -9,7 +9,7 @@ import Demo from './Components/Demo/Demo'
 import Benefits from './Components/Benefits/Benefits'
 import About from './Components/About/About'
 import Footer from './Components/Footer/Footer'
-import Page8 from './Components/Page8/Page8'
+import RequestDemo from './Components/RequestDemo/RequestDemo'
 import UsefulLinks from './Components/UsefulLinks/UsefulLinks'
 
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
         <About />
       </div>
       <div id="page8">
-        <Page8 />
+        <RequestDemo />
       </div>
       <div id="page9">
         <UsefulLinks />
