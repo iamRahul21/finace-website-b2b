@@ -8,8 +8,8 @@ const Footer = () => {
             <div className="Footer-item">
                 <p>Download the mobile app now</p>
                 <div className='appstore'>
-                    <img src="src/assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="get it on google play" />
-                    <img src="src/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" />
+                    <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="get it on google play" />
+                    <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" />
                 </div>
             </div>
             <div className="Footer-item">
