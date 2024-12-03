@@ -4,14 +4,6 @@ import './Footer.scss'
 const Footer = () => {
     return (
         <div className='Footer-section'>
-            <div className="Footer-item">© Copyright Finace. <br /> All Rights Reserved</div>
-            <div className="Footer-item">
-                <p>Download the mobile app now</p>
-                <div className='appstore'>
-                    <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="get it on google play" />
-                    <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" />
-                </div>
-            </div>
             <div className="Footer-item">
                 <p>Follow us on:</p>
                 <div className="social-icons">
@@ -34,6 +26,14 @@ const Footer = () => {
                     ></lord-icon>
                 </div>
             </div>
+            <div className="Footer-item">
+                <p>Download the mobile app now</p>
+                <div className='appstore'>
+                    <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="get it on google play" />
+                    <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" />
+                </div>
+            </div>
+            <div className="Footer-item">© Copyright Finace. <br /> All Rights Reserved</div>
         </div>
     )
 }

@@ -8,8 +8,8 @@ $text-color: white;
     padding: 20px 7%;
     background-color: $bg-color;
     color: $text-color;
-    // border-top: solid 1px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
 }
 
 .Footer-item {
@@ -18,6 +18,8 @@ $text-color: white;
     align-items: center;
     justify-content: center;
     margin: 0 20px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .appstore img {
@@ -30,6 +32,8 @@ $text-color: white;
     display: flex;
     gap: 15px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .Footer-item svg {
@@ -48,14 +52,14 @@ $text-color: white;
     font-size: 1em;
 }
 
-@media (max-width: 768px) {
+/* Responsiveness */
+@media (max-width: 1024px) {
     .Footer-section {
-        flex-direction: column;
-        align-items: center;
+        padding: 20px 5%;
     }
 
     .Footer-item {
-        margin: 10px 0;
+        margin: 10px;
     }
 
     .appstore {
@@ -63,9 +67,46 @@ $text-color: white;
         flex-direction: column;
         align-items: center;
     }
+}
+
+@media (max-width: 768px) {
+    .Footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Footer-item {
+        margin: 15px 0;
+    }
+
+    .appstore img {
+        height: 35px;
+    }
 
     .social-icons {
-        flex-direction: column;
         gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .Footer-section {
+        padding: 15px 2%;
+    }
+
+    .Footer-item {
+        margin: 10px 0;
+    }
+
+    .Footer-item p {
+        font-size: 0.9em;
+    }
+
+    .appstore img {
+        height: 30px;
+    }
+
+    .social-icons {
+        gap: 8px;
     }
 }
