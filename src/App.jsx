@@ -2,7 +2,6 @@ import React from 'react'
 import './app.css'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
-import Phone from './Components/PhoneMockUp/Phone'
 import Features from './Components/Features/Features'
 import Advantages from './Components/Advantages/Advantages'
 import Steps from './Components/Steps/Steps'
@@ -19,7 +18,6 @@ const App = () => {
       <div id="page1">
         <Navbar />
         <Hero />
-        {/* <Phone /> */}
       </div>
       <div id="page2">
         <Features />

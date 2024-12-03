@@ -23,76 +23,90 @@ $grid-breakpoints: (
 // XX-Large devices (larger desktops, 1400px and up)
 
 .hero-section {
-    // background-color: red;
-    // border: 5px solid;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // padding: 10px;
-    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    padding-left: 0;
+    height: 100vh;
+    margin-left: 14%;
+    margin-right: 12%;
+    box-sizing: border-box;
+    gap: 50px;
 }
 
+.hero-left {
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    max-width: 90%;
+    height: auto;
+}
+
+// .hero-right {
+    
+// }
+
 .hero-para-1 {
-    // background-color: seagreen;
-    font-size: 80px;
-    line-height: 85px;
-    text-align: center;
+    // font-size: 2.5rem;
+    font-size: 60px;
     font-weight: 500;
-    padding-bottom: 40px;
     color: $text-color;
-    height: inherit;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .underline {
-    // text-decoration: underline;
     font-weight: 700;
 }
 
 .hero-para-2 {
-    background-color: seagreen;
-    font-size: 30px;
-    // line-height: 40px;
-    text-align: center;
-    font-weight: 400;
-    width: 75%;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    // text-align: center;
+    // font-weight: 400;
+    // width: 75%;
 }
 
 .button {
-    // background-color: yellow;
     display: flex;
-    gap: 1%;
-    justify-content: center;
-    font-size: 15px;
+    gap: 20px;
+    justify-content: center;    
 }
 
 .get-started {
-    background: $button-text-color;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: $color;
     border: solid $color;
-    padding: 10px 15px;
-    border-radius: 25px;
-    // margin-left: 25px;
-    font-weight: 500;
-}
-
-.get-started:hover {
+    background: $button-text-color;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .book-a-demo {
+    font-size: 1.2rem;
+    font-weight: bold;
     background: $color;
     color: $button-text-color;
     border: solid $color;
-    padding: 10px 15px;
-    border-radius: 25px;
-    // margin-left: 25px;
-    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.book-a-demo:hover {
-    cursor: pointer;
-}
+// button hover effects goes here
+
+
+
 
 // Responsiveness
 
@@ -103,53 +117,53 @@ $grid-breakpoints: (
 // Large devices (desktops, 992px and up)
 // X-Large devices (large desktops, 1200px and up)
 // XX-Large devices (larger desktops, 1400px and up)
-@media (max-width: map.get($grid-breakpoints, xl)) {
-    .hero-para-1 {
-        font-size: 70px;
-        line-height: 75px;
-        // background: red;
-    }
-}
+// @media (max-width: map.get($grid-breakpoints, xl)) {
+//     .hero-para-1 {
+//         font-size: 70px;
+//         line-height: 75px;
+//         // background: red;
+//     }
+// }
 
-@media (max-width: map.get($grid-breakpoints, lg)) {
-    .hero-para-1 {
-        font-size: 60px;
-        line-height: 65px;
-        // background: blue;
-    }
+// @media (max-width: map.get($grid-breakpoints, lg)) {
+//     .hero-para-1 {
+//         font-size: 60px;
+//         line-height: 65px;
+//         // background: blue;
+//     }
 
-    .hero-section {
-        top: 25%;
-    }
-}
+//     .hero-section {
+//         top: 25%;
+//     }
+// }
 
-@media (max-width: map.get($grid-breakpoints, md)) {
-    .hero-para-1 {
-        font-size: 50px;
-        line-height: 55px;
-    }
+// @media (max-width: map.get($grid-breakpoints, md)) {
+//     .hero-para-1 {
+//         font-size: 50px;
+//         line-height: 55px;
+//     }
 
-    .hero-section {
-        top: 25%;
-    }
+//     .hero-section {
+//         top: 25%;
+//     }
 
-    .button {
-        // display: block;
-        // width: 30%;
-        font-size: 12px;
-    }
-}
+//     .button {
+//         // display: block;
+//         // width: 30%;
+//         font-size: 12px;
+//     }
+// }
 
-@media (max-width: map.get($grid-breakpoints, sm)) {// 576 r tolot gelei etu hobo
-    .hero-para-1 {
-        font-size: 40px;
-        line-height: 45px;
-    }
-}
+// @media (max-width: map.get($grid-breakpoints, sm)) {// 576 r tolot gelei etu hobo
+//     .hero-para-1 {
+//         font-size: 40px;
+//         line-height: 45px;
+//     }
+// }
 
-@media (max-width: map.get($grid-breakpoints, xs)) {
-    .hero-para-1 {
-        font-size: 30px;
-        line-height: 35px;
-    }
-}
+// @media (max-width: map.get($grid-breakpoints, xs)) {
+//     .hero-para-1 {
+//         font-size: 30px;
+//         line-height: 35px;
+//     }
+// }
