@@ -32,7 +32,7 @@ const App = () => {
         <Demo />
       </div>
       <div id="page6">
-        <Benefits />
+        {/* <Benefits /> */}
       </div>
       <div id="page7">
         <About />
