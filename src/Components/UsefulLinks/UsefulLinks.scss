@@ -4,6 +4,7 @@ $text-color: white;
 .section {
     background-color: $bg-color;
     color: $text-color;
+    padding: 0 14%;
 }
 
 .contact-section {
@@ -12,13 +13,16 @@ $text-color: white;
     padding: 25px;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-left: 14%;
-    margin-right: 14%;
     border-bottom: solid 1px;
+    flex-wrap: wrap;
 }
 
 .contact {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: 1 1 30%;
 }
 
 .contact h4 {
@@ -28,7 +32,8 @@ $text-color: white;
 }
 
 .text {
-    margin-left: 8px;
+    margin-left: 0;
+    text-align: center;
 }
 
 span {
@@ -38,8 +43,8 @@ span {
 
 .useful-links {
     display: flex;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-top: 30px;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -48,9 +53,20 @@ span {
     padding: 25px;
 }
 
+.Finace h1::selection {
+    background-color: #7dac3e;
+    color: #ffffff;
+}
+
+.Finace span::selection {
+    background-color: #7dac3e;
+    color: #ffffff;
+}
+
 .right {
     padding: 25px;
     padding-right: 60px;
+    // width: 45%;
 }
 
 .right h4 {
@@ -59,40 +75,132 @@ span {
 
 .lists {
     display: flex;
+    // flex-direction: column;
+    align-items: center;
 }
 
-.links-list1 {
-    list-style-type: none;
-}
-
-.links-list1 li {
-    color: white;
-}
-
-.links-list1 li a {
-    text-decoration: none;
-    color: white;
-}
-
-.links-list1 li a {
-    text-decoration: none;
-    color: white;
-}
-
+.links-list1,
 .links-list2 {
     list-style-type: none;
+    padding-left: 30px;
 }
 
+.links-list1 li,
 .links-list2 li {
     color: white;
 }
 
+.links-list1 li a,
 .links-list2 li a {
     text-decoration: none;
     color: white;
+    text-transform: uppercase;
+    display: block;
+    margin: 5px 0;
 }
 
 .links-list1 a:hover,
 .links-list2 a:hover {
     color: #7dac3e;
+}
+
+.appstore img {
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.appstore img:hover {
+    transform: scale(1.1);
+}
+
+// Responsiveness
+@media only screen and (max-width: 1024px) {
+    .section {
+        padding: 0 10%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .useful-links {
+        flex-direction: column;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .lists {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        padding: 0 5%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .useful-links {
+        flex-direction: column;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .right h4 {
+        font-size: 18px;
+    }
+
+    .links-list1 li a,
+    .links-list2 li a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section {
+        padding: 0 2%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .useful-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact {
+        margin-bottom: 15px;
+    }
+
+    .links-list1 li a,
+    .links-list2 li a {
+        font-size: 12px;
+    }
 }
