@@ -23,10 +23,10 @@ const App = () => {
         <Features />
       </div>
       <div id="page3">
-        <Advantages />
+        {/* <Advantages /> */}
       </div>
       <div id="page4">
-        <Steps />
+        {/* <Steps /> */}
       </div>
       <div id="page5">
         <Demo />
