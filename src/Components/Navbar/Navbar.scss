@@ -17,7 +17,7 @@ $grid-breakpoints: (
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 10px 14%;
   padding-top: 15px;
   // background: rgba(255, 255, 255, 0.7);
@@ -117,6 +117,7 @@ $grid-breakpoints: (
     @media (max-width: map.get($grid-breakpoints, md)) {
       display: none;
       flex-direction: column;
+      justify-content: center;
       position: absolute;
       top: 60px;
       right: 10%;
@@ -127,7 +128,7 @@ $grid-breakpoints: (
       z-index: 99;
 
       &.active {
-        display: flex;
+        display: inline-grid;
       }
 
       a {
@@ -146,7 +147,7 @@ $grid-breakpoints: (
 
     .navbar a {
       font-size: 16px;
-      color: red;
+      // color: red;
     }
   }
 
