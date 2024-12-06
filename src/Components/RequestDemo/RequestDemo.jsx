@@ -69,6 +69,18 @@ const Page8 = () => {
     };
   }, []);
 
+  // Calendly embed logic
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div id="page8" className="page-container">
       <div className="svg-container">
@@ -118,8 +130,13 @@ const Page8 = () => {
           </g>
         </svg>
       </div>
-      <div className="demo-page-container">
-        <div className="demo-form-container">
+      <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/finace-ops/30min?primary_color=7dac3e"
+        style={{ minWidth: "320px", height: "700px" }}
+      ></div>
+      {/* <div className="demo-page-container"> */}
+      {/* <div className="demo-form-container">
           <h2 className="form-heading">Request a Demo Now</h2>
           <form className="demo-form">
             <div className="form-row">
@@ -156,8 +173,8 @@ const Page8 = () => {
               <button type="submit" className="submit-button">Request</button>
             </div>
           </form>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };

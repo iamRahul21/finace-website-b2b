@@ -160,6 +160,10 @@ textarea:focus,
     background-color: #5c8d44;
 }
 
+.calendly-inline-widget {
+    z-index: 6;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     .demo-form-container {
