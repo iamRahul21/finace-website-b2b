@@ -63,13 +63,12 @@ const Page8 = () => {
     gsap.utils.toArray(".g").forEach(($el) => Line($el));
     gsap.to("svg", { opacity: 1, duration: 1 });
 
-    // Clean-up function
     return () => {
       tl.kill();
     };
   }, []);
 
-  // Calendly embed logic
+  // Calendly
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -130,53 +129,57 @@ const Page8 = () => {
           </g>
         </svg>
       </div>
-      <div
-        className="calendly-inline-widget"
-        data-url="https://calendly.com/finace-ops/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=118f0d&primary_color=083a81"
-        style={{ minWidth: "320px", height: "700px" }}
-      ></div>
-      {/* <div className="demo-page-container"> */}
-      {/* <div className="demo-form-container">
-          <h2 className="form-heading">Request a Demo Now</h2>
-          <form className="demo-form">
-            <div className="form-row">
-              <div className="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required aria-label="Email" />
-              </div>
-              <div className="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Phone" required aria-label="Phone" />
-              </div>
-            </div>
-            <div className="form-group">
-              <input type="text" id="company-name" name="company-name" placeholder="Company Name" required aria-label="Company Name" />
-            </div>
-            <div className="form-group">
-              <select id="company-size" name="company-size" required>
-                <option value="" disabled selected>Company Size</option>
-                <option value="1-10">1-10</option>
-                <option value="11-50">11-50</option>
-                <option value="51-200">51-200</option>
-                <option value="201-500">201-500</option>
-                <option value="500+">500+</option>
-              </select>
-            </div>
-            <div className="form-row">
-              <div className="form-group">
-                <input type="date" id="date-slot" name="date-slot" aria-label="Date Slot" />
-              </div>
-              <div className="form-group">
-                <input type="time" id="time-slot" name="time-slot" aria-label="Time Slot" />
-              </div>
-            </div>
-            <div className="form-message">
-              <textarea id="message" name="message" placeholder="Message" aria-label="Message" />
-              <button type="submit" className="submit-button">Request</button>
-            </div>
-          </form>
-        </div> */}
-      {/* </div> */}
+      <div className="content">
+        <div className="text"><h1 className="head">Request a <br /> demo now!</h1></div>
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/finace-ops/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=118f0d&primary_color=083a81"
+          style={{ minWidth: "320px", height: "700px" }}
+        ></div>
+      </div>
     </div>
   );
 };
 
 export default Page8;
+
+{/* <div className="demo-page-container"> */}
+{/* <div className="demo-form-container">
+    <h2 className="form-heading">Request a Demo Now</h2>
+    <form className="demo-form">
+      <div className="form-row">
+        <div className="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" required aria-label="Email" />
+        </div>
+        <div className="form-group">
+          <input type="tel" id="phone" name="phone" placeholder="Phone" required aria-label="Phone" />
+        </div>
+      </div>
+      <div className="form-group">
+        <input type="text" id="company-name" name="company-name" placeholder="Company Name" required aria-label="Company Name" />
+      </div>
+      <div className="form-group">
+        <select id="company-size" name="company-size" required>
+          <option value="" disabled selected>Company Size</option>
+          <option value="1-10">1-10</option>
+          <option value="11-50">11-50</option>
+          <option value="51-200">51-200</option>
+          <option value="201-500">201-500</option>
+          <option value="500+">500+</option>
+        </select>
+      </div>
+      <div className="form-row">
+        <div className="form-group">
+          <input type="date" id="date-slot" name="date-slot" aria-label="Date Slot" />
+        </div>
+        <div className="form-group">
+          <input type="time" id="time-slot" name="time-slot" aria-label="Time Slot" />
+        </div>
+      </div>
+      <div className="form-message">
+        <textarea id="message" name="message" placeholder="Message" aria-label="Message" />
+        <button type="submit" className="submit-button">Request</button>
+      </div>
+    </form>
+  </div> */}
+{/* </div> */}
