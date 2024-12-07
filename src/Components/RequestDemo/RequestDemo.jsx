@@ -132,7 +132,7 @@ const Page8 = () => {
       </div>
       <div
         className="calendly-inline-widget"
-        data-url="https://calendly.com/finace-ops/30min?primary_color=7dac3e"
+        data-url="https://calendly.com/finace-ops/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=118f0d&primary_color=083a81"
         style={{ minWidth: "320px", height: "700px" }}
       ></div>
       {/* <div className="demo-page-container"> */}
