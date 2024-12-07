@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="Footer-item">
                 <p>Follow us on:</p>
                 <div className="social-icons">
-                    <lord-icon
+                    {/* <lord-icon
                         src="https://cdn.lordicon.com/fmwsotep.json"
                         trigger="hover"
                         stroke="bold"
@@ -17,7 +17,7 @@ const Footer = () => {
                         src="https://cdn.lordicon.com/tzdtywkz.json"
                         trigger="hover"
                         style={{ width: "50px", height: "50px" }}
-                    ></lord-icon>
+                    ></lord-icon> */}
                     <lord-icon
                         src="https://cdn.lordicon.com/awxxhkom.json"
                         trigger="hover"
@@ -30,7 +30,7 @@ const Footer = () => {
                 <p>Download the mobile app now</p>
                 <div className='appstore'>
                     <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="get it on google play" />
-                    <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" />
+                    {/* <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" /> */}
                 </div>
             </div>
             <div className="Footer-item">© Copyright Finace. <br /> All Rights Reserved</div>
