@@ -1,4 +1,4 @@
-$bg-color: #151414;
+$bg-color: #123453;
 $text-color: white;
 
 .Footer-section {
@@ -47,9 +47,20 @@ $text-color: white;
 }
 
 .Footer-item p {
+    color: white;
     margin-bottom: 10px;
     text-align: center;
     font-size: 1em;
+}
+
+.Footer-item::selection {
+    background-color: #75a834;
+    color: #ffffff;
+}
+
+.Footer-item p::selection {
+    background-color: #75a834;
+    color: #ffffff;
 }
 
 /* Responsiveness */

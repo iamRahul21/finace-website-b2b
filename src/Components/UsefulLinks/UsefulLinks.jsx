@@ -17,10 +17,10 @@ const UsefulLinks = () => {
                     ></lord-icon>
                     <div className="text">
                         <h4>Find Us</h4>
-                        <span>Bangalore, India</span>
+                        Bangalore, India
                     </div>
                 </div>
-                <div className="contact">
+                {/* <div className="contact">
                     <lord-icon
                         src="https://cdn.lordicon.com/fmasbomy.json"
                         trigger="hover"
@@ -32,7 +32,7 @@ const UsefulLinks = () => {
                         <h4>Call Us</h4>
                         <span>1234567890</span>
                     </div>
-                </div>
+                </div> */}
                 <div className="contact">
                     <lord-icon
                         src="https://cdn.lordicon.com/tdhnvcoq.json"
@@ -43,13 +43,13 @@ const UsefulLinks = () => {
                     ></lord-icon>
                     <div className="text">
                         <h4>Mail Us</h4>
-                        <span>finace.ops@gmail.com</span>
+                        finace.ops@gmail.com
                     </div>
                 </div>
             </div>
             {/* <hr /> */}
             <div className="useful-links">
-                <div className="Finace"><h1>Finace</h1> <span>is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.</span></div>
+                <div className="Finace"><h1>Finace</h1> is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.</div>
                 <div className='right'>
                     <h4>Useful links</h4>
                     <hr style={{borderWidth: '2px' }} />

@@ -1,4 +1,4 @@
-$bg-color: #151414;
+$bg-color: #123453;
 $text-color: white;
 
 .section {
@@ -36,6 +36,16 @@ $text-color: white;
     text-align: center;
 }
 
+.text h4::selection {
+    background-color: #75a834;
+    color: #ffffff;
+}
+
+.text::selection {
+    background-color: #75a834;
+    color: #ffffff;
+}
+
 span {
     color: #757575;
     font-size: 15px;
@@ -54,12 +64,17 @@ span {
 }
 
 .Finace h1::selection {
-    background-color: #7dac3e;
+    background-color: #75a834;
     color: #ffffff;
 }
 
-.Finace span::selection {
-    background-color: #7dac3e;
+.Finace::selection {
+    background-color: #75a834;
+    color: #ffffff;
+}
+
+.right h4::selection {
+    background-color: #75a834;
     color: #ffffff;
 }
 
@@ -101,7 +116,7 @@ span {
 
 .links-list1 a:hover,
 .links-list2 a:hover {
-    color: #7dac3e;
+    color: #75a834;
 }
 
 .appstore img {

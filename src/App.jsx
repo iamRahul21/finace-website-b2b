@@ -34,9 +34,9 @@ const App = () => {
       <div id="page6">
         {/* <Benefits /> */}
       </div>
-      <div id="page7">
+      {/* <div id="page7">
         <About />
-      </div>
+      </div> */}
       <div id="page8">
         <RequestDemo />
       </div>

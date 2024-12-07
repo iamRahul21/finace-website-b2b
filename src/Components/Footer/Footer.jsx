@@ -38,7 +38,7 @@ const Footer = () => {
                     {/* <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" /> */}
                 </div>
             </div>
-            <div className="Footer-item">© Copyright Finace. <br /> All Rights Reserved</div>
+            <div className="Footer-item">© Copyright Finace.<br/>All Rights Reserved</div>
         </div>
     )
 }
