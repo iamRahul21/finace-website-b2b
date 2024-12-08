@@ -29,14 +29,15 @@ $grid-breakpoints: (
     padding: 50px;
     // padding-left: 0;
     // height: 100vh;
-    margin-top: 5%;
-    margin-left: 14%;
+    margin-top: 2%;
+    margin-left: 10%;
     margin-right: 12%;
     box-sizing: border-box;
     gap: 50px;
 }
 
 .hero-left {
+    width: 70%;
     justify-content: center;
     align-items: center;
 }
@@ -51,23 +52,47 @@ $grid-breakpoints: (
 // }
 
 .hero-para-1 {
-    // font-size: 2.5rem;
-    font-size: 60px;
-    font-weight: 500;
-    color: $text-color;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.2;
     text-align: center;
 }
 
-.underline {
+.line-one {
+    color: $text-color;
+    font-size: 60px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.line-two {
+    color: $text-color;
+    font-size: 60px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.color {
+    font-size: 60px;
+    color: $color;
     font-weight: 700;
 }
 
 .hero-para-2 {
-    font-size: 1.2rem;
+    font-size: 20px;
     margin-bottom: 30px;
-    // text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    // font-weight: 400;
+    // width: 75%;
+}
+
+.hero-para-3 {
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
     // font-weight: 400;
     // width: 75%;
 }
@@ -179,7 +204,7 @@ $grid-breakpoints: (
     }
 
     // .hero-right {
-         // align-items: center;
+    // align-items: center;
     // }
 
     .button {
