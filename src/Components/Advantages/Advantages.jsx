@@ -3,20 +3,89 @@ import './Advantages.scss'
 
 const Advantages = () => {
     return (
-        <div className="advantage-section">
-            <h1 className='advantage-heading'>Services</h1>
-            <ul className='advantage-list'>
-                <li className='advantage-item'>Employee Mobile App
-                    <p className='advantage-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae eaque exercitationem. Cum possimus quam et ea est impedit animi eligendi rerum nulla ipsa!</p>
-                </li>
-                <li className='advantage-item'>Employer Dashboard
-                    <p className='advantage-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae eaque exercitationem. Cum possimus quam et ea est impedit animi eligendi rerum nulla ipsa!</p>
-                </li>
-                <li className='advantage-item'>Efficient Back-end
-                    <p className='advantage-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae eaque exercitationem. Cum possimus quam et ea est impedit animi eligendi rerum nulla ipsa!</p>
-                </li>
-            </ul>
-        </div>
+        <section className="finance-advantage">
+            <h1>Experience the Finance Advantage</h1>
+
+            <div className="benefit-container">
+                {/* Employer Benefits */}
+                <div className="benefit-box employer">
+                    <h3>Employer Benefits</h3>
+                    <ul>
+                        <li><lord-icon
+                            className="icon"
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Increased employee productivity</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Higher employee retention & savings on hiring</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Zero cost and seamless integration</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> No risk and no liability</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> No impact on cash flow/working capital</li>
+                    </ul>
+                </div>
+
+                {/* Employee Benefits */}
+                <div className="benefit-box employee">
+                    <h3>Employee Benefits</h3>
+                    <ul>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> 0% interest</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Real-time access to earned wages</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Financial independence</li>
+                        <li><lord-icon
+                            src="https://cdn.lordicon.com/ymgusxed.json"
+                            className="icon"
+                            trigger="loop"
+                            state="loop-cycle"
+                        // colors="primary:#9ccf60,secondary:#133453"
+                        ></lord-icon> Financial educational tools</li>
+                        {/* <li><i className="icon-placeholder"></i> <span className="placeholder">More coming soon...</span></li> */}
+                    </ul>
+                </div>
+            </div>
+        </section>
     )
 }
 
