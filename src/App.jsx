@@ -26,7 +26,7 @@ const App = () => {
         <Advantages />
       </div>
       <div id="page4">
-        {/* <Steps /> */}
+        <Steps />
       </div>
       <div id="page5">
         <Demo />
