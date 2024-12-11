@@ -26,14 +26,14 @@ const App = () => {
         <Advantages />
       </div>
       <div id="page4">
-        <Steps />
-      </div>
-      <div id="page5">
         <Demo />
       </div>
-      <div id="page6">
-        {/* <Benefits /> */}
+      <div id="page5">
+        <Steps />
       </div>
+      {/* <div id="page6">
+        <Benefits />
+      </div> */}
       {/* <div id="page7">
         <About />
       </div> */}
