@@ -54,19 +54,11 @@ const UsefulLinks = () => {
                     <h4>Useful links</h4>
                     <hr style={{borderWidth: '2px' }} />
                     <div className="lists">
-                        <ul className='links-list1'>
+                        <ul className='links-list'>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">about</a></li>
                             <li><a href="#">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                        <ul className='links-list2'>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Expert Team</a></li>
                             <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Privacy policy</a></li>
                         </ul>
                     </div>
                 </div>

@@ -94,19 +94,16 @@ span {
     align-items: center;
 }
 
-.links-list1,
-.links-list2 {
+.links-list{
     list-style-type: none;
     padding-left: 30px;
 }
 
-.links-list1 li,
-.links-list2 li {
+.links-list li {
     color: white;
 }
 
-.links-list1 li a,
-.links-list2 li a {
+.links-list li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -114,8 +111,7 @@ span {
     margin: 5px 0;
 }
 
-.links-list1 a:hover,
-.links-list2 a:hover {
+.links-list a:hover {
     color: #75a834;
 }
 
@@ -183,8 +179,7 @@ span {
         font-size: 18px;
     }
 
-    .links-list1 li a,
-    .links-list2 li a {
+    .links-list li a {
         font-size: 14px;
     }
 }
@@ -214,8 +209,7 @@ span {
         margin-bottom: 15px;
     }
 
-    .links-list1 li a,
-    .links-list2 li a {
+    .links-list li a {
         font-size: 12px;
     }
 }
