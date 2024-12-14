@@ -111,8 +111,14 @@ span {
     margin: 5px 0;
 }
 
-.links-list a:hover {
+.list-item:hover {
+    cursor: pointer;
     color: #75a834;
+}
+
+.list-item::selection {
+    background-color: #75a834;
+    color: #ffffff;
 }
 
 .appstore img {

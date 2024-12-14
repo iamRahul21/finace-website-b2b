@@ -4,6 +4,26 @@ import 'lord-icon-element';
 import './UsefulLinks.scss'
 
 const UsefulLinks = () => {
+    const scrollToHome = () => {
+        const requestDemoSection = document.getElementById('page1');
+        if (requestDemoSection) {
+            requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToServices = () => {
+        const requestDemoSection = document.getElementById('page2');
+        if (requestDemoSection) {
+            requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToContactUs = () => {
+        const requestDemoSection = document.getElementById('page8');
+        if (requestDemoSection) {
+            requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div className="section">
             <div className='contact-section'>
@@ -52,13 +72,13 @@ const UsefulLinks = () => {
                 <div className="Finace"><h1>Finace</h1> is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.</div>
                 <div className='right'>
                     <h4>Useful links</h4>
-                    <hr style={{borderWidth: '2px' }} />
+                    <hr style={{ borderWidth: '2px' }} />
                     <div className="lists">
                         <ul className='links-list'>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Privacy policy</a></li>
+                            <li><a onClick={scrollToHome} className="list-item">Home</a></li>
+                            <li><a onClick={scrollToServices} className="list-item">services</a></li>
+                            <li><a onClick={scrollToContactUs} className="list-item">Contact us</a></li>
+                            <li><a className="list-item">Privacy policy</a></li>
                         </ul>
                     </div>
                 </div>

@@ -2,6 +2,13 @@ import React from 'react'
 import './Demo.scss'
 
 const Demo = () => {
+    const scrollToRequestDemo = () => {
+        const requestDemoSection = document.getElementById('page8');
+        if (requestDemoSection) {
+            requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="demo-section">
             <div className="demo-txt">
@@ -16,7 +23,7 @@ const Demo = () => {
                     </p>
                 </div>
                 <div className="demo-right">
-                    <a href="/" className="demo-btn">Book a Demo</a>
+                    <a className="demo-btn" onClick={scrollToRequestDemo}>Book a Demo</a>
                 </div>
             </div>
         </div>

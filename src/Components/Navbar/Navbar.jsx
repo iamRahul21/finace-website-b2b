@@ -9,6 +9,20 @@ const Navbar = () => {
     setIsNavActive(!isNavActive);
   };
 
+  const scrollToGetStarted = () => {
+    const requestDemoSection = document.getElementById('page2');
+    if (requestDemoSection) {
+      requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToAboutUs = () => {
+    const requestDemoSection = document.getElementById('page9');
+    if (requestDemoSection) {
+      requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="header">
       <a href="/" className="logo">
@@ -26,9 +40,9 @@ const Navbar = () => {
 
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
         <a href="/">Home</a>
-        <a href="/">Services</a>
-        <a href="/">Blog</a>
-        <a href="/">About Us</a>
+        <a onClick={scrollToGetStarted}>Services</a>
+        {/* <a href="/">Blog</a> */}
+        <a onClick={scrollToAboutUs}>About Us</a>
         {/* <a href="/">Team</a>
         <a href="/">Mobile App</a>
         <a href="/">FAQs</a> */}

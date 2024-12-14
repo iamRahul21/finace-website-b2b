@@ -138,6 +138,10 @@ $grid-breakpoints: (
     }
   }
 
+  .navbar a:hover {
+    cursor: pointer;
+  }
+
   // Responsive
   @media (max-width: map.get($grid-breakpoints, sm)) {
     padding: 10px 5%;

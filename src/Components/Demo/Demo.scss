@@ -121,6 +121,7 @@ $hover-transition-duration: 0.6s;
 }
 
 .demo-btn:hover {
+    cursor: pointer;
     background: $color;
     color: #fff;
     transform: scale(1.05);
