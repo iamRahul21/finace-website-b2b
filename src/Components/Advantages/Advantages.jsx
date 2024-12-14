@@ -16,37 +16,40 @@ const Advantages = () => {
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Increased employee productivity</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Higher employee retention & savings on hiring</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Zero cost and seamless integration</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> No risk and no liability</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> No impact on cash flow/working capital</li>
                     </ul>
+                </div>
+                <div>
+                    <img src="/employer.svg" alt="Employer Icon" />
+                </div>
+            </div>
+            <div className="benefit-container">
+                <div>
+                    <img src="/employee.svg" alt="Employee Icon" />
                 </div>
 
                 {/* Employee Benefits */}
@@ -58,28 +61,24 @@ const Advantages = () => {
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> 0% interest</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Real-time access to earned wages</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Financial independence</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
-                        // colors="primary:#9ccf60,secondary:#133453"
                         ></lord-icon> Financial educational tools</li>
                         {/* <li><i className="icon-placeholder"></i> <span className="placeholder">More coming soon...</span></li> */}
                     </ul>
