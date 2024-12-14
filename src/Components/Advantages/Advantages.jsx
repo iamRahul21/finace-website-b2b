@@ -4,7 +4,7 @@ import './Advantages.scss'
 const Advantages = () => {
     return (
         <section className="finance-advantage">
-            <h1>Experience the Finance Advantage</h1>
+            <h1>Experience the Finace Advantage</h1>
 
             <div className="benefit-container">
                 {/* Employer Benefits */}
