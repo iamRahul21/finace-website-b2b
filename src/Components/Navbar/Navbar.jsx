@@ -41,6 +41,7 @@ const Navbar = () => {
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
         <a href="/">Home</a>
         <a onClick={scrollToGetStarted}>Services</a>
+        <a href="https://befinace.com/faq.html" target="_blank" rel="noopener noreferrer">FAQs</a>
         {/* <a href="/">Blog</a> */}
         <a onClick={scrollToAboutUs}>About Us</a>
         {/* <a href="/">Team</a>

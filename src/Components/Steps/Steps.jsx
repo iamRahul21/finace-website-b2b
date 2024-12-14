@@ -80,7 +80,7 @@ const Steps = () => {
                     </div>
                 </div>
             </div>
-            <iframe
+            {/* <iframe
                 ref={iframeRef}
                 width="760"
                 height="415"
@@ -90,7 +90,7 @@ const Steps = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen>
-            </iframe>
+            </iframe> */}
         </section>
     )
 }
