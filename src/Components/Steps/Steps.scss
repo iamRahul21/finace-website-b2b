@@ -32,7 +32,7 @@ $items: 4;
 $rows: math.ceil(calc($items / 2));
 
 /* Card sizing */
-$card-height: 400px;
+$card-height: 150px;
 $card-width: 450px;
 $inner-margin: 15px;
 $number-size: 35px;
@@ -46,11 +46,8 @@ $steps: #46b8e9;
 $box-color: #75a834;
 $timeline: #bdbdbd;
 
-$container-height: ($rows * 490px) + $stagger;
+$container-height: ($rows * 200px) + $stagger;
 $container-width: $card-width*2 + $outer-margin*3;
-$head-height: $number-size + 50;
-$body-height: $card-height - $head-height;
-$marker-dist: $card-width + calc($outer-margin/2) - calc($marker-size/2);
 
 @include mq-lg {
     %arrow {
@@ -156,13 +153,13 @@ body {
     .demo-card {
         position: relative;
         display: block;
-        margin: 10px auto 80px;
+        margin: 20px auto;
         max-width: 94%;
         z-index: 2;
 
         @include mq-sm {
             max-width: 60%;
-            box-shadow: $box-shadow;
+            // box-shadow: $box-shadow;
         }
 
         @include mq-md {
@@ -171,7 +168,9 @@ body {
 
         @include mq-lg {
             max-width: $card-width;
-            height: $card-height;
+            margin: 40px 0;
+            max-width: $card-width;
+            height: auto;
             margin: $outer-margin;
             margin-top: calc($outer-margin/2);
             margin-bottom: calc($outer-margin/2);
@@ -188,7 +187,7 @@ body {
 
                 .head::before {
                     @extend %marker;
-                    left: $marker-dist + 1;
+                    left: calc($card-width + $outer-margin/2 - $marker-size/2 + 1px);
                 }
             }
 
@@ -204,7 +203,7 @@ body {
 
                 .head::before {
                     @extend %marker;
-                    right: $marker-dist - 1;
+                    right: calc($card-width + $outer-margin/2 - $marker-size/2 - 1px);
                 }
             }
 
@@ -249,27 +248,27 @@ body {
             }
         }
 
-        .body {
-            background: #fff;
-            border: $border;
-            border-top: 0;
-            // padding: $inner-margin;
+        // .body {
+        //     background: #fff;
+        //     border: $border;
+        //     border-top: 0;
+        //     // padding: $inner-margin;
 
-            @include mq-lg {
-                height: $body-height;
-            }
+        //     @include mq-lg {
+        //         height: $body-height;
+        //     }
 
-            p {
-                font-size: 14px;
-                line-height: 18px;
-                margin-bottom: $inner-margin;
-            }
+        //     p {
+        //         font-size: 14px;
+        //         line-height: 18px;
+        //         margin-bottom: $inner-margin;
+        //     }
 
-            img {
-                display: block;
-                width: 100%;
-            }
-        }
+        //     img {
+        //         display: block;
+        //         width: 100%;
+        //     }
+        // }
 
         @for $i from 1 through $items {
             &--step#{$i} {
@@ -280,4 +279,10 @@ body {
             }
         }
     }
+}
+
+iframe {
+    display: block;
+    margin: 40px auto;
+    max-width: 100%;
 }
