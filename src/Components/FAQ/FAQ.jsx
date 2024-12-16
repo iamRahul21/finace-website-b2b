@@ -1,11 +1,17 @@
 import React from 'react';
 import './FAQ.scss'; 
+import Navbar from '../Navbar/Navbar';
+import UsefulLinks from '../UsefulLinks/UsefulLinks';
+import Footer from '../Footer/Footer';
 
 const FAQ = () => {
   return (
-    <div className="faq">
-      <h1>Frequently Asked Questions</h1>
-    </div>
+    <section>
+        <Navbar />
+
+        <UsefulLinks />
+        <Footer />
+    </section>
   );
 };
 
