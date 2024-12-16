@@ -1,13 +1,24 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
 import './RequestDemo.scss';
 
 const Page8 = () => {
-  // Calendly
+  // HubSpot form
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.src = "https://js.hsforms.net/forms/embed/v2.js";
     script.async = true;
+
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          region: "na1",
+          portalId: "24408272",
+          formId: "84ba8311-7202-49ba-94be-dbb30cf465c1",
+          target: "#hubspot-form-container",
+        });
+      }
+    };
+
     document.body.appendChild(script);
 
     return () => {
@@ -17,14 +28,9 @@ const Page8 = () => {
 
   return (
     <div id="page8" className="page-container">
-      <div className="content">
-        <div className="text"><h1 className="head">Request a <br /> demo now!</h1></div>
-        <div
-          className="calendly-inline-widget"
-          data-url="https://calendly.com/finace-ops/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=118f0d&primary_color=083a81"
-          style={{ minWidth: "320px", height: "700px", marginBottom: "50px", marginTop: "0" }}
-        ></div>
-      </div>
+      <h1 className="head">Request a demo now!</h1>
+      <h5 className="subhead">Don't wait any longer, let Finace be the first step towards creating a more prosperous future for your organization and employees.</h5>
+      <div id="hubspot-form-container" className="form-container"></div>
     </div>
   );
 };
