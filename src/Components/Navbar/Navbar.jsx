@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import DemoButton from '../DemoButton/DemoButton';
 
@@ -41,7 +42,7 @@ const Navbar = () => {
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
         <a href="/">Home</a>
         <a onClick={scrollToGetStarted}>Services</a>
-        <a href="/faq">FAQ</a>
+        <Link to="/faq">FAQs</Link>
         {/* <a href="/">Blog</a> */}
         <a onClick={scrollToAboutUs}>About Us</a>
         {/* <a href="/">Team</a>
