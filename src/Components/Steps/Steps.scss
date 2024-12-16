@@ -1,288 +1,131 @@
 @use 'sass:math';
 
-@mixin mq-xs {
-    @media (min-width: 320px) {
-        @content;
-    }
-}
-
-@mixin mq-sm {
-    @media (min-width: 480px) {
-        @content;
-    }
-}
-
-@mixin mq-md {
-    @media (min-width: 720px) {
-        @content;
-    }
-}
-
-@mixin mq-lg {
-    @media (min-width: 1000px) {
-        @content;
-    }
-}
-
 $background: #f7f7f7;
-$box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
 $border: 1px solid rgba(191, 191, 191, 0.4);
-$items: 4;
-
-$rows: math.ceil(calc($items / 2));
-
-/* Card sizing */
-$card-height: 150px;
-$card-width: 450px;
-$inner-margin: 15px;
-$number-size: 35px;
-$stagger: 180px;
-$outer-margin: 90px;
-$marker-size: 9px;
-
-/* Colors */
-
-$steps: #46b8e9;
-$box-color: #75a834;
-$timeline: #bdbdbd;
-
-$container-height: ($rows * 200px) + $stagger;
-$container-width: $card-width*2 + $outer-margin*3;
-
-@include mq-lg {
-    %arrow {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-    }
-
-    %marker {
-        position: absolute;
-        content: "";
-        width: $marker-size;
-        height: $marker-size;
-        background-color: $timeline;
-        border-radius: $marker-size;
-        box-shadow: 0px 0px 2px 8px $background;
-    }
-}
-
-$counter: $items - $rows + 2;
-
-@for $i from 1 through $rows {
-    .demo-card:nth-child(#{$i*2-1}) {
-        order: $i
-    }
-
-    .demo-card:nth-child(#{$i*2}) {
-        order: $counter
-    }
-
-    $counter: $counter + 1;
-}
-
-* {
-    box-sizing: border-box;
-}
+$card-bg: #75a834;
+$text-color: #123453;
+$timeline-color: #bdbdbd;
 
 body {
-    font-family: Roboto;
-}
-
-.number-box span {
-    color: white;
-    font-size: 35px;
-}
-
-.head h2 {
-    font-size: 20px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: $background;
+    color: $text-color;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 #timeline {
-    padding: 100px 0;
-    background: $background;
-    border-top: $border;
-    border-bottom: $border;
+    margin: 0 auto;
+    padding: 20px 10px;
+    max-width: 800px;
+    // width: 100%;
+    box-sizing: border-box;
 
-    h1 {
-        text-align: center;
-        color: #123453;
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 20px;
+    @media (max-width: 768px) {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    p.leader {
-        text-align: center;
-        max-width: 90%;
-        margin: auto;
-        margin-bottom: 45px;
+    @media (max-width: 480px) {
+        padding: 15px;
+    }
+}
+
+.steps-head {
+    text-align: center;
+    // font-size: 2rem;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
     }
 
-    .demo-card-wrapper {
-        position: relative;
-        margin: auto;
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
+}
 
-        @include mq-lg {
+.leader {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
+    }
+}
+
+.demo-card {
+    background-color: $card-bg;
+    margin-bottom: 20px;
+    padding: 20px;
+    // border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+
+    @media (max-width: 768px) {
+        padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 10px;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+
+        .number-box {
             display: flex;
-            flex-flow: column wrap;
-            width: $container-width;
-            height: $container-height;
-            margin: 0 auto;
-        }
-
-        &::after {
-            z-index: 1;
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            border-left: $border;
-
-            @include mq-lg {
-                border-left: 1px solid $timeline;
-            }
-        }
-    }
-
-    .demo-card {
-        position: relative;
-        display: block;
-        margin: 20px auto;
-        max-width: 94%;
-        z-index: 2;
-
-        @include mq-sm {
-            max-width: 60%;
-            // box-shadow: $box-shadow;
-        }
-
-        @include mq-md {
-            max-width: 40%;
-        }
-
-        @include mq-lg {
-            max-width: $card-width;
-            margin: 40px 0;
-            max-width: $card-width;
-            height: auto;
-            margin: $outer-margin;
-            margin-top: calc($outer-margin/2);
-            margin-bottom: calc($outer-margin/2);
-
-            &:nth-child(odd) {
-                margin-right: calc($outer-margin/2);
-
-                .head::after {
-                    @extend %arrow;
-                    border-left-width: 15px;
-                    border-left-style: solid;
-                    left: 100%;
-                }
-
-                .head::before {
-                    @extend %marker;
-                    left: calc($card-width + $outer-margin/2 - $marker-size/2 + 1px);
-                }
-            }
-
-            &:nth-child(even) {
-                margin-left: calc($outer-margin/2);
-
-                .head::after {
-                    @extend %arrow;
-                    border-right-width: 15px;
-                    border-right-style: solid;
-                    right: 100%;
-                }
-
-                .head::before {
-                    @extend %marker;
-                    right: calc($card-width + $outer-margin/2 - $marker-size/2 - 1px);
-                }
-            }
-
-            &:nth-child(2) {
-                margin-top: $stagger;
-            }
-        }
-
-        .head {
-            position: relative;
-            display: flex;
+            justify-content: center;
             align-items: center;
-            color: #fff;
-            font-weight: 400;
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            // border-radius: 5px;
+            flex-shrink: 0; // Prevent shrinking
 
-            .number-box {
-                display: inline;
-                float: left;
-                margin: $inner-margin;
-                padding: 10px;
-                font-size: $number-size;
-                line-height: $number-size;
-                font-weight: 600;
-                background: rgba(0, 0, 0, 0.17);
-            }
-
-            h3 {
-                @include mq-sm {
-                    font-size: 165%;
-                    line-height: 1.2rem;
-                }
-
-                span {
-                    display: block;
-                    font-size: 0.6rem;
-                    margin: 0;
-
-                    @include mq-sm {
-                        font-size: 0.8rem;
-                    }
-                }
+            @media (max-width: 480px) {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
         }
 
-        // .body {
-        //     background: #fff;
-        //     border: $border;
-        //     border-top: 0;
-        //     // padding: $inner-margin;
+        h2 {
+            color: white;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            text-align: justify;
 
-        //     @include mq-lg {
-        //         height: $body-height;
-        //     }
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                margin-left: 10px;
+            }
 
-        //     p {
-        //         font-size: 14px;
-        //         line-height: 18px;
-        //         margin-bottom: $inner-margin;
-        //     }
-
-        //     img {
-        //         display: block;
-        //         width: 100%;
-        //     }
-        // }
-
-        @for $i from 1 through $items {
-            &--step#{$i} {
-                background-color: #75a834; 
-                .head::after {
-                    border-color: #75a834;
-                }
+            @media (max-width: 480px) {
+                font-size: 0.9rem;
             }
         }
     }
 }
 
-iframe {
-    display: block;
-    margin: 40px auto;
-    max-width: 100%;
+.demo-card + .demo-card {
+    margin-top: 20px;
+
+    @media (max-width: 480px) {
+        margin-top: 15px;
+    }
 }
