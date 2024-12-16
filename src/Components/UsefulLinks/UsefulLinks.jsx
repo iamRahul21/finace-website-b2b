@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'lord-icon-element';
 import './UsefulLinks.scss'
@@ -78,7 +79,7 @@ const UsefulLinks = () => {
                             <li><a onClick={scrollToHome} className="list-item">Home</a></li>
                             <li><a onClick={scrollToServices} className="list-item">services</a></li>
                             <li><a onClick={scrollToContactUs} className="list-item">Contact us</a></li>
-                            <li><a className="list-item">Privacy policy</a></li>
+                            <li><a className="list-item"><Link to="/privacy-policy">Privacy Policy</Link></a></li>
                         </ul>
                     </div>
                 </div>

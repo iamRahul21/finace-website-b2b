@@ -116,6 +116,11 @@ span {
     color: #75a834;
 }
 
+.links-list li a:hover {
+    cursor: pointer;
+    color: #75a834;
+}
+
 .list-item::selection {
     background-color: #75a834;
     color: #ffffff;
