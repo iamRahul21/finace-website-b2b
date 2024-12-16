@@ -8,7 +8,7 @@ const FAQ = () => {
   return (
     <section>
         <Navbar />
-
+        <div className="faq">Coming Soon</div>
         <UsefulLinks />
         <Footer />
     </section>
