@@ -64,6 +64,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             margin: 10px 0;
             display: flex;
             align-items: center;
+            text-align: justify;
+            text-justify: inter-word;
             gap: 10px;
             padding: 10px;
             border-radius: 5px;
