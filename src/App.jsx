@@ -14,10 +14,12 @@ import RequestDemo from './Components/RequestDemo/RequestDemo';
 import UsefulLinks from './Components/UsefulLinks/UsefulLinks';
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import FAQ from './Components/FAQ/FAQ';
+import ScrollToTop from './Components/ScrollToTop';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
