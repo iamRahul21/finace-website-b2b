@@ -13,6 +13,9 @@ const Advantages = () => {
                 </div>
                 <div className="benefit-box employer">
                     <h3>Employer Benefits</h3>
+                    <div id='inside-employer'>
+                        <img src="/employer.svg" alt="Employer Icon" />
+                    </div>
                     <ul>
                         <li><lord-icon
                             className="icon"
@@ -63,6 +66,9 @@ const Advantages = () => {
                 {/* Employee Benefits */}
                 <div className="benefit-box employee">
                     <h3>Employee Benefits</h3>
+                    <div id='inside-employee'>
+                    <img src="/employee.svg" alt="Employee Icon" />
+                </div>
                     <ul>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"

@@ -133,6 +133,15 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
+// inside image styles
+#inside-employer {
+    display: none;
+}
+
+#inside-employee {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .benefit-container {
@@ -157,6 +166,24 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
         #employee-img {
             display: none;
+        }
+
+        // inside image styles
+        #inside-employer {
+            display: block;
+            max-width: 215px;
+        }
+
+        #inside-employer img {
+            max-width: 215px;
+        }
+
+        #inside-employee {
+            display: block;
+        }
+
+        #inside-employee img {
+            max-width: 215px;
         }
     }
 
