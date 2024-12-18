@@ -19,6 +19,7 @@ body {
 }
 
 .main-content {
+    padding: 25px;
     flex: 3;
 }
 
@@ -185,6 +186,10 @@ p ol li::selection {
         flex-direction: column;
     }
 
+    .main-content {
+        padding: 20px;
+    }
+
     .table-of-contents {
         display: none;
     }
@@ -206,6 +211,10 @@ p ol li::selection {
 }
 
 @media (max-width: 480px) {
+    .main-content {
+        padding: 15px;
+    }
+
     .main-content h1 {
         font-size: 32px;
     }
