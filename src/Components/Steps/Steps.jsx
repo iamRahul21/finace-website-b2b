@@ -46,7 +46,7 @@ const Steps = () => {
                         <div className="number-box">
                             01
                         </div>
-                        <h2>Employee requests earned pay on Finace.</h2>
+                        <h2>Employee requests earned pay on Finace</h2>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ const Steps = () => {
                         <div className="number-box">
                             02
                         </div>
-                        <h2>Finace credits the earned salary instantly to the employee's account.</h2>
+                        <h2>Finace credits the earned salary instantly to the employee's account</h2>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ const Steps = () => {
                         <div className="number-box">
                             03
                         </div>
-                        <h2>Finace reconciles the earned salary with your company's payroll.</h2>
+                        <h2>Finace reconciles the earned salary with your company's payroll</h2>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@ const Steps = () => {
                         <div className="number-box">
                             04
                         </div>
-                        <h2>Employers gain real-time insights into the financial analytics of the workforce, including earned wage access and employee turnover rates.</h2>
+                        <h2>Employers gain real-time insights into the financial analytics of the workforce, including earned wage access and employee turnover rates</h2>
                     </div>
                 </div>
             </div>

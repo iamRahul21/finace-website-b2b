@@ -6,6 +6,13 @@ import Footer from '../Footer/Footer';
 import RequestDemo from '../RequestDemo/RequestDemo'
 
 const PrivacyPolicy = () => {
+  // Function to scroll to specific sections
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section id='privacy'>
       <Navbar />
@@ -13,10 +20,22 @@ const PrivacyPolicy = () => {
         <div className="table-of-contents">
           <h3>Table of Contents</h3>
           <ul>
-            <li><a href="#section1">Introduction</a></li>
-            <li><a href="#section2">Collection, processing, disclosure, and sharing of Information.</a></li>
-            <li><a href="#section3">Information Usage</a></li>
-            <li><a href="#section4">Mechanism for Grievance Redressal</a></li>
+            <li>
+              <a onClick={() => scrollToSection('section1')}>Introduction</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('section2')}>
+                Collection, processing, disclosure, and sharing of Information.
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('section3')}>Information Usage</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection('section4')}>
+                Mechanism for Grievance Redressal
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -30,10 +49,22 @@ const PrivacyPolicy = () => {
           <div className="table-of-contents1">
             <h3>Table of Contents</h3>
             <ul>
-              <li><a href="#section1">Introduction</a></li>
-              <li><a href="#section2">Collection, processing, disclosure, and sharing of Information.</a></li>
-              <li><a href="#section3">Information Usage</a></li>
-              <li><a href="#section4">Mechanism for Grievance Redressal</a></li>
+              <li>
+                <a onClick={() => scrollToSection('section1')}>Introduction</a>
+              </li>
+              <li>
+                <a onClick={() => scrollToSection('section2')}>
+                  Collection, processing, disclosure, and sharing of Information.
+                </a>
+              </li>
+              <li>
+                <a onClick={() => scrollToSection('section3')}>Information Usage</a>
+              </li>
+              <li>
+                <a onClick={() => scrollToSection('section4')}>
+                  Mechanism for Grievance Redressal
+                </a>
+              </li>
             </ul>
           </div>
           <hr />
@@ -60,7 +91,7 @@ const PrivacyPolicy = () => {
             Policy or amendments thereof.
           </p>
 
-          <h2 id="section2">Collection, processing, disclosure, and sharing of Information.</h2>
+          <h2>Collection, processing, disclosure, and sharing of Information.</h2>
           <p>
             <ul>
               <li>

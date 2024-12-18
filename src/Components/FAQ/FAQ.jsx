@@ -15,6 +15,14 @@ const FAQ = () => {
   useEffect(() => {
     setActiveTab('employer');
   }, []);
+
+  // Function to scroll to specific sections
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section>
       <Navbar />
@@ -54,8 +62,8 @@ const FAQ = () => {
             </div>
             <h3>Employer Support</h3>
             <ul>
-              <li><a href="#about">About Finace</a></li>
-              <li><a href="#EWA">About Earned Wage Access</a></li>
+              <li><a onClick={() => scrollToSection('about-employer')}>About Finace</a></li>
+              <li><a onClick={() => scrollToSection('EWA-employer')}>About Earned Wage Access</a></li>
             </ul>
             <div className="support-box">
               <strong>Still need support?</strong>
@@ -85,8 +93,8 @@ const FAQ = () => {
             </div>
             <h3>Employee Support</h3>
             <ul>
-              <li><a href="#aboutEE">About Finace</a></li>
-              <li><a href="#EWAEE">About Earned Wage Access</a></li>
+              <li><a onClick={() => scrollToSection('about-employee')}>About Finace</a></li>
+              <li><a onClick={() => scrollToSection('EWA-employee')}>About Earned Wage Access</a></li>
             </ul>
             <div className="support-box">
               <strong>Still need support?</strong>
@@ -100,7 +108,7 @@ const FAQ = () => {
           {activeTab === 'employer' && (
             <section id="employerFaq">
               <div className="faq-section">
-                <h2 id="about">About Finace</h2>
+                <h2 id="about-employer">About Finace</h2>
                 <div
                   className={`faq-item ${openFaq === 0 ? 'open' : ''}`}
                   onClick={() => toggleFaq(0)}
@@ -300,7 +308,7 @@ const FAQ = () => {
                     finace.ops@gmail.com</p>
                 </div>
 
-                <h2 id="EWA">About Earned Wage Access</h2>
+                <h2 id="EWA-employer">About Earned Wage Access</h2>
                 <div
                   className={`faq-item ${openFaq === 15 ? 'open' : ''}`}
                   onClick={() => toggleFaq(15)}
@@ -317,8 +325,6 @@ const FAQ = () => {
                     capital.
                   </p>
                 </div>
-
-
 
                 <div
                   className={`faq-item ${openFaq === 16 ? 'open' : ''}`}
@@ -400,7 +406,7 @@ const FAQ = () => {
           {activeTab === 'employee' && (
             <section id="employeeFaq">
               <div className="faq-section">
-                <h2>About Finace</h2>
+                <h2 id='about-employee'>About Finace</h2>
                 <div
                   className={`faq-item ${openFaq === 22 ? 'open' : ''}`}
                   onClick={() => toggleFaq(22)}
@@ -507,7 +513,7 @@ const FAQ = () => {
                   <p>You can reach Finace's customer support via email. Email: finace.ops@gmail.com</p>
                 </div>
 
-                <h2>About Earned Wage Access</h2>
+                <h2 id='EWA-employee'>About Earned Wage Access</h2>
                 <div
                   className={`faq-item ${openFaq === 30 ? 'open' : ''}`}
                   onClick={() => toggleFaq(30)}
