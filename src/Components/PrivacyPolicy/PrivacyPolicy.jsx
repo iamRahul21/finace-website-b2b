@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
             Policy or amendments thereof.
           </p>
 
-          <h2>Collection, processing, disclosure, and sharing of Information.</h2>
+          <h2 id="section2">Collection, processing, disclosure, and sharing of Information.</h2>
           <p>
             <ul>
               <li>
