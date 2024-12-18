@@ -53,7 +53,7 @@ const UsefulLinks = () => {
     };
 
     return (
-        <div className="section">
+        <div className="useful-section">
             <div className='contact-section'>
                 <div className="contact">
                     <lord-icon
