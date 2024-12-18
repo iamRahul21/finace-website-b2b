@@ -13,7 +13,7 @@ const FAQ = () => {
       const navbarHeight = navbar ? navbar.offsetHeight : 0;
       const faqHeaderHeight = faqHeader ? faqHeader.offsetHeight : 0;
 
-      const combinedHeight = navbarHeight + faqHeaderHeight + 10;
+      const combinedHeight = navbarHeight + faqHeaderHeight + 50;
       document.documentElement.style.scrollPaddingTop = `${combinedHeight}px`;
     };
 

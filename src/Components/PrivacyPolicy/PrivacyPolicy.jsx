@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
       const navbarHeight = navbar ? navbar.offsetHeight : 0;
       const tocHeight = tableOfContents ? tableOfContents.offsetHeight : 0;
 
-      const combinedHeight = navbarHeight + tocHeight + 10;
+      const combinedHeight = navbarHeight + tocHeight + 50;
 
       document.documentElement.style.scrollPaddingTop = `${combinedHeight}px`;
     };
