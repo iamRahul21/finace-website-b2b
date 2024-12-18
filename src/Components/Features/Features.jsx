@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 import './Features.scss'
 
 const Features = () => {
-    // const [isHidden, setIsHidden] = useState(true);
-
-    // // Toggle function
-    // const toggleDisclaimer = () => {
-    //     setIsHidden(!isHidden);
-    // };
-
     return (
         <div class="main-container">
             <div class="container heading-container">
