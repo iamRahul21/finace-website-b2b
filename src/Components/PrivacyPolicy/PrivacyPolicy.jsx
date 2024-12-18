@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
   return (
     <section id='privacy'>
       <Navbar />
-      <div className="container">
+      <div className="privacy-container">
         <div className="main-content">
           <h1>Privacy Policy</h1>
           <p style={{textAlign: 'center'}}>

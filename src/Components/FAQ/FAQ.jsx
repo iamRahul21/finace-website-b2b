@@ -33,7 +33,7 @@ const FAQ = () => {
           <p>Learn how to start using our product. Understand the key features</p></div>
       </header>
 
-      <div className="faq-container">
+      <div className="faq-containers">
         {activeTab === 'employer' && (
           <aside className="sidebar" id="employerToC">
             <div className="toggle-buttons">
