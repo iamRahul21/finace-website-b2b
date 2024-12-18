@@ -19,30 +19,35 @@ const Advantages = () => {
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             trigger="loop"
                             state="loop-cycle"
+                            style={{ width: '30px', height: '30px' }}
                         ></lord-icon> Increased employee productivity</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
+                            style={{ width: '40px', height: '30px' }}
                         ></lord-icon> Higher employee retention & savings on hiring</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
+                            style={{ width: '30px', height: '30px' }}
                         ></lord-icon> Zero cost and seamless integration</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
+                            style={{ width: '30px', height: '30px' }}
                         ></lord-icon> No risk and no liability</li>
                         <li><lord-icon
                             src="https://cdn.lordicon.com/ymgusxed.json"
                             className="icon"
                             trigger="loop"
                             state="loop-cycle"
+                            style={{ width: '30px', height: '30px' }}
                         ></lord-icon> No impact on cash flow/working capital</li>
                     </ul>
                 </div>
