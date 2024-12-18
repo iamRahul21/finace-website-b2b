@@ -1,11 +1,30 @@
-import React from 'react';
-import './PrivacyPolicy.scss'
+import React, { useEffect } from 'react';
+import './PrivacyPolicy.scss';
 import Navbar from '../Navbar/Navbar';
 import UsefulLinks from '../UsefulLinks/UsefulLinks';
 import Footer from '../Footer/Footer';
-import RequestDemo from '../RequestDemo/RequestDemo'
+import RequestDemo from '../RequestDemo/RequestDemo';
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    const updateScrollPadding = () => {
+      const navbar = document.querySelector('.header');
+      const tableOfContents = document.querySelector('.table-of-contents');
+
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const tocHeight = tableOfContents ? tableOfContents.offsetHeight : 0;
+
+      const combinedHeight = navbarHeight + tocHeight + 10;
+
+      document.documentElement.style.scrollPaddingTop = `${combinedHeight}px`;
+    };
+
+    updateScrollPadding();
+    window.addEventListener('resize', updateScrollPadding);
+
+    return () => window.removeEventListener('resize', updateScrollPadding);
+  }, []);
+
   // Function to scroll to specific sections
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -38,7 +57,6 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
         </div>
-
 
         <div className="main-content">
           <h1>Privacy Policy</h1>
@@ -176,7 +194,6 @@ const PrivacyPolicy = () => {
             <a href="#top">Back to top ↑</a>
           </div>
         </div>
-
 
       </div>
       <RequestDemo />

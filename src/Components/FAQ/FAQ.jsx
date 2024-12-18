@@ -5,6 +5,24 @@ import UsefulLinks from '../UsefulLinks/UsefulLinks';
 import Footer from '../Footer/Footer';
 
 const FAQ = () => {
+  useEffect(() => {
+    const updateScrollPadding = () => {
+      const navbar = document.querySelector('.header');
+      const faqHeader = document.querySelector('.faq-header');
+
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const faqHeaderHeight = faqHeader ? faqHeader.offsetHeight : 0;
+
+      const combinedHeight = navbarHeight + faqHeaderHeight + 10;
+      document.documentElement.style.scrollPaddingTop = `${combinedHeight}px`;
+    };
+
+    updateScrollPadding();
+    window.addEventListener('resize', updateScrollPadding);
+
+    return () => window.removeEventListener('resize', updateScrollPadding);
+  }, []);
+
   const [activeTab, setActiveTab] = useState('employer');
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -16,7 +34,6 @@ const FAQ = () => {
     setActiveTab('employer');
   }, []);
 
-  // Function to scroll to specific sections
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
