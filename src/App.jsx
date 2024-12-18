@@ -7,8 +7,6 @@ import Features from './Components/Features/Features';
 import Advantages from './Components/Advantages/Advantages';
 import Steps from './Components/Steps/Steps';
 import Demo from './Components/Demo/Demo';
-import Benefits from './Components/Benefits/Benefits';
-import About from './Components/About/About';
 import Footer from './Components/Footer/Footer';
 import RequestDemo from './Components/RequestDemo/RequestDemo';
 import UsefulLinks from './Components/UsefulLinks/UsefulLinks';
@@ -41,12 +39,6 @@ const App = () => {
               <div id="page5">
                 <Steps />
               </div>
-              {/* <div id="page6">
-                <Benefits />
-              </div> */}
-              {/* <div id="page7">
-                <About />
-              </div> */}
               <div id="page8">
                 <RequestDemo />
               </div>

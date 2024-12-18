@@ -10,10 +10,21 @@ const PrivacyPolicy = () => {
     <section id='privacy'>
       <Navbar />
       <div className="privacy-container">
+        <div className="table-of-contents">
+          <h3>Table of Contents</h3>
+          <ul>
+            <li><a href="#section1">Introduction</a></li>
+            <li><a href="#section2">Collection, processing, disclosure, and sharing of Information.</a></li>
+            <li><a href="#section3">Information Usage</a></li>
+            <li><a href="#section4">Mechanism for Grievance Redressal</a></li>
+          </ul>
+        </div>
+
+
         <div className="main-content">
           <h1>Privacy Policy</h1>
-          <p style={{textAlign: 'center'}}>
-            <strong>Last Updated May 23rd, 2022</strong>
+          <p style={{ textAlign: 'center' }}>
+            {/* <strong>Last Updated May 23rd, 2022</strong> */}
           </p>
 
           <div className="table-of-contents1">
@@ -135,15 +146,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
 
-        <div className="table-of-contents">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li><a href="#section1">Introduction</a></li>
-            <li><a href="#section2">Collection, processing, disclosure, and sharing of Information.</a></li>
-            <li><a href="#section3">Information Usage</a></li>
-            <li><a href="#section4">Mechanism for Grievance Redressal</a></li>
-          </ul>
-        </div>
+
       </div>
       <RequestDemo />
       <UsefulLinks />

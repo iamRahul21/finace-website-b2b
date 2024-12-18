@@ -1,21 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'lord-icon-element';
-import './UsefulLinks.scss'
+import './UsefulLinks.scss';
 
 const UsefulLinks = () => {
+    const navigate = useNavigate();
+
     const scrollToHome = () => {
         const requestDemoSection = document.getElementById('page1');
         if (requestDemoSection) {
             requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const requestDemoSection = document.getElementById('page1');
+                if (requestDemoSection) {
+                    requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
-    };
+    }
 
     const scrollToServices = () => {
         const requestDemoSection = document.getElementById('page2');
         if (requestDemoSection) {
             requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const requestDemoSection = document.getElementById('page2');
+                if (requestDemoSection) {
+                    requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     };
 
@@ -23,8 +41,17 @@ const UsefulLinks = () => {
         const requestDemoSection = document.getElementById('page8');
         if (requestDemoSection) {
             requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const requestDemoSection = document.getElementById('page8');
+                if (requestDemoSection) {
+                    requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     };
+
     return (
         <div className="section">
             <div className='contact-section'>
@@ -68,24 +95,26 @@ const UsefulLinks = () => {
                     </div>
                 </div>
             </div>
-            {/* <hr /> */}
+
             <div className="useful-links">
-                <div className="Finace"><h1>Finace</h1> is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.</div>
+                <div id='page9-about' className="Finace">
+                    <h1>Finace</h1> is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.
+                </div>
                 <div className='right'>
                     <h4>Useful links</h4>
                     <hr style={{ borderWidth: '2px' }} />
                     <div className="lists">
                         <ul className='links-list'>
                             <li><a onClick={scrollToHome} className="list-item">Home</a></li>
-                            <li><a onClick={scrollToServices} className="list-item">services</a></li>
-                            <li><a onClick={scrollToContactUs} className="list-item">Contact us</a></li>
+                            <li><a onClick={scrollToServices} className="list-item">Services</a></li>
+                            <li><a onClick={scrollToContactUs} className="list-item">Contact Us</a></li>
                             <li><a className="list-item"><Link to="/privacy-policy">Privacy Policy</Link></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default UsefulLinks
+export default UsefulLinks;

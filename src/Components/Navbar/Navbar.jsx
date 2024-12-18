@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
 import DemoButton from '../DemoButton/DemoButton';
 
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const navigate = useNavigate();
 
   const toggleNavbar = () => {
     setIsNavActive(!isNavActive);
@@ -14,13 +15,29 @@ const Navbar = () => {
     const requestDemoSection = document.getElementById('page2');
     if (requestDemoSection) {
       requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const requestDemoSection = document.getElementById('page2');
+        if (requestDemoSection) {
+          requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
     }
   };
 
   const scrollToAboutUs = () => {
-    const requestDemoSection = document.getElementById('page9');
+    const requestDemoSection = document.getElementById('page9-about');
     if (requestDemoSection) {
       requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const requestDemoSection = document.getElementById('page9-about');
+        if (requestDemoSection) {
+          requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
     }
   };
 

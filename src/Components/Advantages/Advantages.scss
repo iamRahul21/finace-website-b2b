@@ -1,7 +1,8 @@
 @use "sass:color";
 
 $box-color: #E6FFE9;
-$hover-color: #75a834;
+$hover-color-green: #75a834;
+$hover-color-blue: #133453;
 $text-color: white;
 $hover-transition-duration: 0.6s;
 $primary-color: #133453;
@@ -64,15 +65,15 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             margin: 10px 0;
             display: flex;
             align-items: center;
-            text-align: justify;
-            text-justify: inter-word;
+            text-align: left;
+            // text-justify: inter-word;
             gap: 10px;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 0.3s ease, color 0.3s ease;
 
             &:hover {
-                background-color: $hover-color;
+                // background-color: $hover-color;
                 color: $text-color;
             }
 
@@ -86,10 +87,18 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
     &.employer {
         background-color: #e9f4e8;
+
+        ul li:hover{
+            background-color: $hover-color-green;
+        }
     }
 
     &.employee {
         background-color: #e0f7fa;
+
+        ul li:hover{
+            background-color: $hover-color-blue;
+        }
     }
 
     &:hover {
@@ -116,6 +125,14 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
+#hidden-employer {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .benefit-container {
@@ -126,6 +143,16 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         &>div {
             max-width: 500px;
             flex-basis: 100%;
+        }
+
+        #hidden-employer{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #hide-employer {
+            display: none;
         }
     }
 
@@ -192,6 +219,10 @@ $shadow-color: rgba(0, 0, 0, 0.1);
                 height: 18px;
             }
         }
+    }
+
+    #hidden-employer img {
+        max-width: 150px;
     }
 
     .benefit-container img {

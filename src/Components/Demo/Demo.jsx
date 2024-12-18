@@ -11,10 +11,10 @@ const Demo = () => {
 
     return (
         <div className="demo-section">
-            <div className="demo-txt">
+            {/* <div className="demo-txt">
                 <h2>Request Demo</h2>
                 <h2>Request Demo</h2>
-            </div>
+            </div> */}
             <div className="content">
                 <div className="demo-left">
                     <h2 className="demo-h2">Are you ready to experience the power of Finace?</h2>

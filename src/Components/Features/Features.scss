@@ -2,7 +2,7 @@
 
 $box-color: #E6FFE9;
 // $hover-color: color.scale($box-color, $lightness: -20%);
-$hover-color: #75a834;
+$hover-color: #a8d57b;
 $text-color: white;
 $hover-transition-duration: 0.6s;
 
@@ -93,11 +93,6 @@ $hover-transition-duration: 0.6s;
   justify-content: space-between;
 }
 
-.fa-check-circle {
-  color: #6dcd9e;
-  margin-right: 15px;
-}
-
 .cta-btn {
   border: 2px solid #0f3790;
   border-radius: 5px;
@@ -141,5 +136,12 @@ $hover-transition-duration: 0.6s;
 
   .card-container {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
 }
