@@ -592,6 +592,9 @@ const FAQ = () => {
               </div>
             </section>
           )}
+          <div className="back-to-top">
+            <a href="#top">Back to top ↑</a>
+          </div>
         </main>
       </div>
       <UsefulLinks />
