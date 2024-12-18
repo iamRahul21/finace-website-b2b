@@ -56,7 +56,7 @@ const Advantages = () => {
                 </div>
             </div>
             <div className="benefit-container">
-                <div>
+                <div id='employee-img'>
                     <img src="/employee.svg" alt="Employee Icon" />
                 </div>
 

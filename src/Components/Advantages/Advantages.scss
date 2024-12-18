@@ -145,13 +145,17 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             flex-basis: 100%;
         }
 
-        #hidden-employer{
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-        }
+        // #hidden-employer{
+        //     display: block;
+        //     margin: 0 auto;
+        //     text-align: center;
+        // }
 
         #hide-employer {
+            display: none;
+        }
+
+        #employee-img {
             display: none;
         }
     }
