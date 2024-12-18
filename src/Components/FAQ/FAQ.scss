@@ -7,29 +7,49 @@ $hover-transition-duration: 0.6s;
 
 .faq-header {
     width: 100%;
-    text-align: center;
     margin-top: 80px;
-    padding-left: 120px;
-    padding-right: 120px;
     margin-bottom: 20px;
-    // display: flex;
-    // justify-content: space-between;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: sticky;
     top: 80px;
     z-index: 5;
     background-color: #fff;
-    padding: 10px 0;
     box-sizing: border-box;
 }
 
-.faq-header h1 {
-    // text-align: left;
-    font-size: 2rem;
-    color: #333;
+.faq-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
-.faq-header p {
-    color: #666;
+.faq-header-text {
+    text-align: left;
+}
+
+.faq-header-text h1 {
+    margin: 0;
+    // font-size: 24px;
+    font-weight: 700;
+}
+
+.faq-header-text p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+.faq-header-text h1::selection {
+    color: white;
+    background-color: $green;
+}
+
+.faq-header-text p::selection {
+    color: white;
+    background-color: $green;
 }
 
 .toggle-buttons {
@@ -133,7 +153,6 @@ $hover-transition-duration: 0.6s;
     text-decoration: underline;
 }
 
-/* Main content styling */
 .faq-content {
     top: 100px;
     flex: 3;
@@ -147,7 +166,6 @@ $hover-transition-duration: 0.6s;
     margin-bottom: 30px;
 }
 
-/* FAQ Section Header */
 .faq-section h2 {
     // font-size: 1.8rem;
     color: black;
@@ -157,7 +175,11 @@ $hover-transition-duration: 0.6s;
     font-weight: bold;
 }
 
-/* FAQ item styling */
+.faq-section h2::selection {
+    color: white;
+    background-color: $green;
+}
+
 .faq-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -167,10 +189,20 @@ $hover-transition-duration: 0.6s;
 }
 
 .faq-item:hover {
-    background-color: #f9f9f9;
+    background-color: hsl(86, 53%, 60%);
+    border-radius: 10px;
+
+    .faq-que {
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .icon {
+        color: white;
+        transition: color 0.3s ease;
+    }
 }
 
-/* FAQ question styling */
 .faq-que {
     display: flex;
     justify-content: space-between;
@@ -188,13 +220,18 @@ $hover-transition-duration: 0.6s;
     margin: 0;
 }
 
+// .faq-que h3::selection {
+//     color: white;
+//     background-color: $green;
+// }
+
 .faq-item.open .faq-que h3 {
     color: #0056b3;
 }
 
 .icon {
     font-size: 1.5rem;
-    color: $green;
+    color: $blue;
     transition: transform 0.3s ease;
 }
 
@@ -211,11 +248,16 @@ $hover-transition-duration: 0.6s;
     padding-left: 20px;
 }
 
+.faq-item p::selection {
+    color: white;
+    background-color: $blue;
+}
+
 .faq-item.open p {
     display: block;
 }
 
-/* Mobile Styles */
+/* Responsiveness */
 @media (max-width: 1024px) {
     .faq-header {
         padding-left: 50px;

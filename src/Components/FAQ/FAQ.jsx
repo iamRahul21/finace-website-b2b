@@ -20,8 +20,17 @@ const FAQ = () => {
       <Navbar />
 
       <header className="faq-header">
-        <h1>Frequently Asked Questions</h1>
-        <p>Learn how to start using our product. Understand the key features</p>
+        <div className="faq-hover">
+          <lord-icon
+            src="https://cdn.lordicon.com/abhwievu.json"
+            trigger="hover"
+            state="hover-conversation-alt"
+            colors="primary:#9ccf60,secondary:#123453,tertiary:#ebe6ef,quaternary:#ebe6ef"
+            style={{ width: '150px', height: '150px' }}
+          ></lord-icon>
+        </div>
+        <div className="faq-header-text"><h1>Frequently Asked Questions</h1>
+          <p>Learn how to start using our product. Understand the key features</p></div>
       </header>
 
       <div className="faq-container">
