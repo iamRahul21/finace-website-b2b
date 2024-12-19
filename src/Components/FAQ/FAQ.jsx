@@ -86,11 +86,12 @@ const FAQ = () => {
                 EMPLOYEE
               </button>
             </div>
-            <h3>Employer Support</h3>
-            <ul>
-              <li><a onClick={() => scrollToSection('about-employer')}>About Finace</a></li>
-              <li><a onClick={() => scrollToSection('EWA-employer')}>About Earned Wage Access</a></li>
-            </ul>
+            <div className="color-this-employer">
+              <h3>Employer Support</h3>
+              <ul>
+                <li><a onClick={() => scrollToSection('about-employer')}>About Finace</a></li>
+                <li><a onClick={() => scrollToSection('EWA-employer')}>About Earned Wage Access</a></li>
+              </ul></div>
             <div className="support-box">
               <strong>Still need support?</strong>
               <p>Contact our support team.</p>
@@ -117,11 +118,13 @@ const FAQ = () => {
                 EMPLOYEE
               </button>
             </div>
-            <h3>Employee Support</h3>
-            <ul>
-              <li><a onClick={() => scrollToSection('about-employee')}>About Finace</a></li>
-              <li><a onClick={() => scrollToSection('EWA-employee')}>About Earned Wage Access</a></li>
-            </ul>
+            <div className="color-this-employee">
+              <h3>Employee Support</h3>
+              <ul>
+                <li><a onClick={() => scrollToSection('about-employee')}>About Finace</a></li>
+                <li><a onClick={() => scrollToSection('EWA-employee')}>About Earned Wage Access</a></li>
+              </ul>
+            </div>
             <div className="support-box">
               <strong>Still need support?</strong>
               <p>Contact our support team.</p>

@@ -338,13 +338,31 @@ $hover-transition-duration: 0.6s;
     .sidebar {
         display: block;
         width: 100%;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         position: relative;
         top: 0px;
         padding-bottom: 0px;
     }
 
+    .color-this-employer {
+        background: #e9f4e8;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid;
+    }
+
+    .color-this-employee {
+        background: #e0f7fa;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid;
+    }
+
     .sidebar ul {
+        margin-bottom: 0px;
+    }
+
+    .sidebar ul li{
         margin-bottom: 0px;
     }
 
