@@ -9,7 +9,7 @@ const Advantages = () => {
             <div className="benefit-container">
                 {/* Employer Benefits */}
                 <div id='hidden-employer'>
-                    <img src="/employer.svg" alt="Employer Icon" />
+                    <img src="/employer.svg" alt="Employer image" />
                 </div>
                 <div className="benefit-box employer">
                     <h3>Employer Benefits</h3>
@@ -55,12 +55,12 @@ const Advantages = () => {
                     </ul>
                 </div>
                 <div>
-                    <img id='hide-employer' src="/employer.svg" alt="Employer Icon" />
+                    <img id='hide-employer' src="/employer.svg" alt="Employer image" />
                 </div>
             </div>
             <div className="benefit-container">
                 <div id='employee-img'>
-                    <img src="/employee.svg" alt="Employee Icon" />
+                    <img src="/employee.svg" alt="Employee image" />
                 </div>
 
                 {/* Employee Benefits */}

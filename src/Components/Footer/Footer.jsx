@@ -33,7 +33,7 @@ const Footer = () => {
                 <p>Download the mobile app now</p>
                 <div className='appstore'>
                     <a href="https://play.google.com/store/apps/details?id=com.befinace.app&hl=en" target="_blank" rel="noopener noreferrer">
-                        <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" />
+                        <img src="/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play button image" />
                     </a>
                     {/* <img src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the app store" /> */}
                 </div>
