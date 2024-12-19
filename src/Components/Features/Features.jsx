@@ -5,7 +5,7 @@ const Features = () => {
     return (
         <div class="main-container">
             <div class="container heading-container">
-                <h1 class="heading">Our Offerings</h1>
+                <h1 id='offerings' class="heading">Our Offerings</h1>
                 <p class="subheading">We are revolutionizing the world of wealth management with our fully-integrated platform.
                 </p>
             </div>

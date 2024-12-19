@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
       <Navbar />
       <div className="privacy-container">
         <div className="table-of-contents">
-          <h3>Table of Contents</h3>
+          <h3>Contents</h3>
           <ul>
             <li>
               <a onClick={() => scrollToSection('section1')}>Introduction</a>
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <div className="table-of-contents1">
-            <h3>Table of Contents</h3>
+            <h3>Contents</h3>
             <ul>
               <li>
                 <a onClick={() => scrollToSection('section1')}>Introduction</a>

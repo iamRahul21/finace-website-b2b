@@ -6,6 +6,14 @@ const Hero = () => {
         const requestDemoSection = document.getElementById('page8');
         if (requestDemoSection) {
             requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const requestDemoSection = document.getElementById('page8');
+                if (requestDemoSection) {
+                    requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     };
 
@@ -13,6 +21,14 @@ const Hero = () => {
         const requestDemoSection = document.getElementById('page2');
         if (requestDemoSection) {
             requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                const requestDemoSection = document.getElementById('page2');
+                if (requestDemoSection) {
+                    requestDemoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     };
 

@@ -107,6 +107,7 @@ p ol li::selection {
 }
 
 .table-of-contents ul li a:hover {
+    cursor: pointer;
     color: #75a834;
     font-weight: 500;
     transition-duration: 500ms;
