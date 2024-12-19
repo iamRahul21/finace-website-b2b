@@ -97,7 +97,7 @@ span {
 
 .links-list{
     list-style-type: none;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .links-list li {
@@ -193,6 +193,7 @@ span {
 
     .links-list li a {
         font-size: 14px;
+        text-align: center;
     }
 }
 
