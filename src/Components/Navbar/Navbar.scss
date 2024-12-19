@@ -164,6 +164,11 @@ $grid-breakpoints: (
 
     .logo {
       font-size: 24px;
+
+      img {
+        height: 35px;
+        width: auto;
+      }
     }
 
     .navbar a {

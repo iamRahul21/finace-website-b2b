@@ -59,7 +59,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <a href="/" className="logo">
-        <img src="\Logo.png" alt="Fiance logo" style={{ height: "50px", width: "auto" }} />
+        <img src="\Logo.png" alt="Fiance logo"  />
       </a>
 
       <div
