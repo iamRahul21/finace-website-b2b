@@ -87,9 +87,9 @@ const FAQ = () => {
               </button>
             </div>
             <div className="color-this-employer">
-              <h3>Employer Support</h3>
+              <h3>Employer Support Contents</h3>
               <ul>
-                <li><a onClick={() => scrollToSection('about-employer')}>About Finace</a></li>
+                <li><a onClick={() => scrollToSection('about-employer')}>About Finace </a></li>
                 <li><a onClick={() => scrollToSection('EWA-employer')}>About Earned Wage Access</a></li>
               </ul></div>
             <div className="support-box">
@@ -119,7 +119,7 @@ const FAQ = () => {
               </button>
             </div>
             <div className="color-this-employee">
-              <h3>Employee Support</h3>
+              <h3>Employee Support Contents</h3>
               <ul>
                 <li><a onClick={() => scrollToSection('about-employee')}>About Finace</a></li>
                 <li><a onClick={() => scrollToSection('EWA-employee')}>About Earned Wage Access</a></li>
