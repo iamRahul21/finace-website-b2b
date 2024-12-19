@@ -11,33 +11,49 @@ const Navbar = () => {
     setIsNavActive(!isNavActive);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = document.querySelector('.header').offsetHeight;
+      const offsetPosition = section.offsetTop - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const scrollToGetStarted = () => {
-    const requestDemoSection = document.getElementById('page2');
-    if (requestDemoSection) {
-      requestDemoSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
+    if (window.location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
-        const requestDemoSection = document.getElementById('page2');
-        if (requestDemoSection) {
-          requestDemoSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToSection('page2');
       }, 500);
+    } else {
+      scrollToSection('page2');
+    }
+  };
+
+  const scrollToRequestDemo = () => {
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection('page8');
+      }, 500);
+    } else {
+      scrollToSection('page8');
     }
   };
 
   const scrollToAboutUs = () => {
-    const requestDemoSection = document.getElementById('page9-about');
-    if (requestDemoSection) {
-      requestDemoSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
+    if (window.location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
-        const requestDemoSection = document.getElementById('page9-about');
-        if (requestDemoSection) {
-          requestDemoSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToSection('page9-about');
       }, 500);
+    } else {
+      scrollToSection('page9-about');
     }
   };
 
@@ -60,11 +76,7 @@ const Navbar = () => {
         <a href="/">Home</a>
         <a onClick={scrollToGetStarted}>Services</a>
         <Link to="/faq">FAQs</Link>
-        {/* <a href="/">Blog</a> */}
         <a onClick={scrollToAboutUs}>About Us</a>
-        {/* <a href="/">Team</a>
-        <a href="/">Mobile App</a>
-        <a href="/">FAQs</a> */}
         <DemoButton />
       </nav>
     </header>
