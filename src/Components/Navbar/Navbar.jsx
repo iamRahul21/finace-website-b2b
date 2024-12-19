@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
-import DemoButton from '../DemoButton/DemoButton';
 
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -77,7 +76,8 @@ const Navbar = () => {
         <a onClick={scrollToGetStarted}>Services</a>
         <Link to="/faq">FAQs</Link>
         <a onClick={scrollToAboutUs}>About Us</a>
-        <DemoButton />
+        <a id='new-demo-button' onClick={scrollToRequestDemo}>Book a Demo</a>
+        {/* <DemoButton /> */}
       </nav>
     </header>
   );
