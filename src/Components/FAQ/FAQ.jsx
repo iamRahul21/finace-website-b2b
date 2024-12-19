@@ -56,6 +56,15 @@ const FAQ = () => {
         </div>
         <div className="faq-header-text"><h1>Frequently Asked Questions</h1>
           <p>Learn how to start using our product. Understand the key features</p></div>
+        <div className="faq-hover-hidden">
+          <lord-icon
+            src="https://cdn.lordicon.com/abhwievu.json"
+            trigger="hover"
+            state="hover-conversation-alt"
+            colors="primary:#9ccf60,secondary:#123453,tertiary:#ebe6ef,quaternary:#ebe6ef"
+            style={{ width: '150px', height: '150px' }}
+          ></lord-icon>
+        </div>
       </header>
 
       <div className="faq-containers">
@@ -612,6 +621,11 @@ const FAQ = () => {
           <div className="back-to-top">
             <a href="#top">Back to top ↑</a>
           </div>
+          {/* <div className="support-box-last">
+              <strong>Still need support?</strong>
+              <p>Contact our support team.</p>
+              <p>Email: <a href="mailto:finace.ops@gmail.com">finace.ops@gmail.com</a></p>
+            </div> */}
         </main>
       </div>
       <UsefulLinks />

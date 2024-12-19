@@ -27,6 +27,13 @@ $hover-transition-duration: 0.6s;
     margin-right: 20px;
 }
 
+.faq-hover-hidden {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
 .faq-header-text {
     text-align: left;
 }
@@ -293,6 +300,7 @@ $hover-transition-duration: 0.6s;
         padding-left: 50px;
         padding-right: 50px;
         position: relative;
+        margin-top: 15px;
     }
 
     .faq-container {
@@ -303,8 +311,9 @@ $hover-transition-duration: 0.6s;
     .sidebar {
         flex: none;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         position: relative;
+        top: 40px;
     }
 
     .faq-content {
@@ -323,19 +332,48 @@ $hover-transition-duration: 0.6s;
 
 /* Responsiveness (768px) */
 @media (max-width: 768px) {
+    .faq-hover{
+        display: none;
+    }
     .sidebar {
         display: block;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         position: relative;
-        top: 50px;
+        top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .sidebar ul {
+        margin-bottom: 0px;
+    }
+
+    .sidebar h3 {
+        margin-bottom: 0;
     }
 
     .toggle-buttons {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
-        margin-bottom: 20px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+
+    #employerBtn {
+        // color: red;
+        padding: 0px;
+        margin: 50px;
+        margin-top: 0px;
+        margin-right: 3px;
+    }
+
+    #employeeBtn {
+        // color: red;
+        padding: 0px;
+        margin: 50px;
+        margin-top: 0px;
+        margin-left: 3px;
+        
     }
 
     .faq-content {
@@ -363,17 +401,23 @@ $hover-transition-duration: 0.6s;
         width: 45%;
         padding: 12px 0;
     }
+
+    .support-box {
+        display: none;
+    }
 }
 
 /* Responsiveness (480px) */
 @media (max-width: 480px) {
     .faq-header-text {
-        margin-left: 5%;
+        margin-left: 0;
+
     }
 
     .faq-section h2 {
         font-size: 1.3rem;
-        padding-top: 20px;
+        padding-top: 10px;
+        margin-bottom: 0px;
     }
 
     .faq-que {
@@ -393,7 +437,8 @@ $hover-transition-duration: 0.6s;
     }
 
     .faq-item {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .faq-que h3 {
