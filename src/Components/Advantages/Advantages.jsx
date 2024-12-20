@@ -9,7 +9,7 @@ const Advantages = () => {
             <div className="benefit-container">
                 {/* Employer Benefits */}
                 <div id="hidden-employer">
-                    <img src="/employer.svg" alt="Employer illustration" />
+                    <img src="/employer.svg" alt="Illustration of an employer" />
                 </div>
                 <div className="benefit-box employer">
                     <h3>Employer Benefits</h3>
@@ -24,7 +24,7 @@ const Advantages = () => {
                                 trigger="loop"
                                 state="loop-cycle"
                                 style={{ width: '30px', height: '30px' }}
-                                aria-label="Increased employee productivity"
+                                aria-hidden="true"
                             ></lord-icon>
                             Increased employee productivity
                         </li>
@@ -35,7 +35,7 @@ const Advantages = () => {
                                 trigger="loop"
                                 state="loop-cycle"
                                 style={{ width: '40px', height: '30px' }}
-                                aria-label="Higher employee retention & savings on hiring"
+                                aria-hidden="true"
                             ></lord-icon>
                             Higher employee retention & savings on hiring
                         </li>
@@ -46,7 +46,7 @@ const Advantages = () => {
                                 trigger="loop"
                                 state="loop-cycle"
                                 style={{ width: '30px', height: '30px' }}
-                                aria-label="Zero cost and seamless integration"
+                                aria-hidden="true"
                             ></lord-icon>
                             Zero cost and seamless integration
                         </li>
@@ -57,7 +57,7 @@ const Advantages = () => {
                                 trigger="loop"
                                 state="loop-cycle"
                                 style={{ width: '30px', height: '30px' }}
-                                aria-label="No risk and no liability"
+                                aria-hidden="true"
                             ></lord-icon>
                             No risk and no liability
                         </li>
@@ -68,19 +68,19 @@ const Advantages = () => {
                                 trigger="loop"
                                 state="loop-cycle"
                                 style={{ width: '30px', height: '30px' }}
-                                aria-label="No impact on cash flow/working capital"
+                                aria-hidden="true"
                             ></lord-icon>
                             No impact on cash flow/working capital
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <img id="hide-employer" src="/employer.svg" alt="Employer illustration" />
+                    <img id="hide-employer" src="/employer.svg" alt="Illustration of an employer" />
                 </div>
             </div>
             <div className="benefit-container">
                 <div id="employee-img">
-                    <img src="/employee.svg" alt="Employee illustration" />
+                    <img src="/employee.svg" alt="Illustration of an employee" />
                 </div>
 
                 {/* Employee Benefits */}
@@ -96,7 +96,7 @@ const Advantages = () => {
                                 className="icon"
                                 trigger="loop"
                                 state="loop-cycle"
-                                aria-label="0% interest"
+                                aria-hidden="true"
                             ></lord-icon>
                             0% interest
                         </li>
@@ -106,7 +106,7 @@ const Advantages = () => {
                                 className="icon"
                                 trigger="loop"
                                 state="loop-cycle"
-                                aria-label="Real-time access to earned wages"
+                                aria-hidden="true"
                             ></lord-icon>
                             Real-time access to earned wages
                         </li>
@@ -116,7 +116,7 @@ const Advantages = () => {
                                 className="icon"
                                 trigger="loop"
                                 state="loop-cycle"
-                                aria-label="Financial independence"
+                                aria-hidden="true"
                             ></lord-icon>
                             Financial independence
                         </li>
@@ -126,7 +126,7 @@ const Advantages = () => {
                                 className="icon"
                                 trigger="loop"
                                 state="loop-cycle"
-                                aria-label="Financial educational tools"
+                                aria-hidden="true"
                             ></lord-icon>
                             Financial educational tools
                         </li>
