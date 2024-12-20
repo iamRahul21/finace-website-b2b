@@ -62,7 +62,7 @@ const Navbar = () => {
         <img src="/Logo.png" alt="Finace logo" />
       </a>
 
-      <button
+      <a
         className={`burger-button ${isNavActive ? 'active' : ''}`}
         onClick={toggleNavbar}
         aria-label="Toggle navigation menu"
@@ -70,7 +70,7 @@ const Navbar = () => {
         <span></span>
         <span></span>
         <span></span>
-      </button>
+      </a>
 
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
         <a href="/" aria-label="Navigate to home page">Home</a>

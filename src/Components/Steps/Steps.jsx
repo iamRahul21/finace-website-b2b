@@ -40,43 +40,44 @@ const Steps = () => {
             <p className="leader" aria-label="Introduction to the steps in using Finace platform">
                 With Finace, managing your finances has never been easier. Our platform works seamlessly in four simple steps:
             </p>
-            <div className="demo-card-wrapper">
-                <div className="demo-card" role="listitem">
+
+            <ul className="demo-card-wrapper" role="list" aria-label="Steps to use Finace platform">
+                <li className="demo-card" role="listitem">
                     <div className="head">
                         <div className="number-box" aria-label="Step 1">
                             01
                         </div>
                         <h2>Employee requests earned pay on Finace</h2>
                     </div>
-                </div>
+                </li>
 
-                <div className="demo-card" role="listitem">
+                <li className="demo-card" role="listitem">
                     <div className="head">
                         <div className="number-box" aria-label="Step 2">
                             02
                         </div>
                         <h2>Finace credits the earned salary instantly to the employee's account</h2>
                     </div>
-                </div>
+                </li>
 
-                <div className="demo-card" role="listitem">
+                <li className="demo-card" role="listitem">
                     <div className="head">
                         <div className="number-box" aria-label="Step 3">
                             03
                         </div>
                         <h2>Finace reconciles the earned salary with your company's payroll</h2>
                     </div>
-                </div>
+                </li>
 
-                <div className="demo-card" role="listitem">
+                <li className="demo-card" role="listitem">
                     <div className="head">
                         <div className="number-box" aria-label="Step 4">
                             04
                         </div>
                         <h2>Employers gain real-time insights into the financial analytics of the workforce, including earned wage access and employee turnover rates</h2>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
             {/* 
             <iframe
                 ref={iframeRef}
