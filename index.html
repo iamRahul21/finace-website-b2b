@@ -1,16 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Logo_Icon_Blue@4x.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-    <title>Finace</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finace</title>
+
+  <link rel="preload" as="image" href="/Logo_Icon_Blue@4x.png">
+  <link rel="icon" type="image/svg+xml" href="/Logo_Icon_Blue@4x.png">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Allura&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet"></noscript>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script async src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script defer type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
