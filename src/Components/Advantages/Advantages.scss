@@ -88,7 +88,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     &.employer {
         background-color: #e9f4e8;
 
-        ul li:hover{
+        ul li:hover {
             background-color: $hover-color-green;
         }
     }
@@ -96,7 +96,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     &.employee {
         background-color: #e0f7fa;
 
-        ul li:hover{
+        ul li:hover {
             background-color: $hover-color-blue;
         }
     }
@@ -133,7 +133,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-// inside image styles
 #inside-employer {
     display: none;
 }
@@ -154,12 +153,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             flex-basis: 100%;
         }
 
-        // #hidden-employer{
-        //     display: block;
-        //     margin: 0 auto;
-        //     text-align: center;
-        // }
-
         #hide-employer {
             display: none;
         }
@@ -168,7 +161,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             display: none;
         }
 
-        // inside image styles
         #inside-employer {
             display: block;
             max-width: 215px;

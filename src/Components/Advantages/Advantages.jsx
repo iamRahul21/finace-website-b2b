@@ -94,7 +94,6 @@ const Advantages = () => {
                             trigger="loop"
                             state="loop-cycle"
                         ></lord-icon> Financial educational tools</li>
-                        {/* <li><i className="icon-placeholder"></i> <span className="placeholder">More coming soon...</span></li> */}
                     </ul>
                 </div>
             </div>

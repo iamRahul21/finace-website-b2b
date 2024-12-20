@@ -1,4 +1,5 @@
 $bg-color: #123453;
+$green: #75a834;
 $text-color: white;
 
 .Footer-section {
@@ -54,12 +55,12 @@ $text-color: white;
 }
 
 .Footer-item::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
 .Footer-item p::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 

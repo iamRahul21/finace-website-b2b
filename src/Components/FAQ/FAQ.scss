@@ -1,7 +1,10 @@
 @use "sass:color";
 
 $green: #75a834;
+$hover-green: hsl(86, 53%, 60%);
 $blue: #123453;
+$employer-green: #e9f4e8;
+$employee-blue: #e0f7fa;
 $text-color: white;
 $hover-transition-duration: 0.6s;
 
@@ -133,7 +136,7 @@ $hover-transition-duration: 0.6s;
 }
 
 .color-this-employer {
-    background: #e9f4e8;
+    background: $employer-green;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid;
@@ -156,7 +159,7 @@ $hover-transition-duration: 0.6s;
 }
 
 .color-this-employee {
-    background: #e0f7fa;
+    background: $employee-blue;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid;
@@ -245,7 +248,7 @@ $hover-transition-duration: 0.6s;
 }
 
 .faq-item:hover {
-    background-color: hsl(86, 53%, 60%);
+    background-color: $hover-green;
     border-radius: 10px;
 
     .faq-que {
@@ -322,9 +325,9 @@ $hover-transition-duration: 0.6s;
 
 .back-to-top a {
     text-decoration: none;
-    color: #75a834;
+    color: $green;
     font-weight: 500;
-    border: 2px solid #75a834;
+    border: 2px solid $green;
     padding: 5px;
     border-radius: 4px;
 }
@@ -333,8 +336,8 @@ $hover-transition-duration: 0.6s;
     text-decoration: none;
     color: white;
     font-weight: 500;
-    border: 2px solid #75a834;
-    background-color: #75a834;
+    border: 2px solid $green;
+    background-color: $green;
     padding: 5px;
     border-radius: 4px;
 }
@@ -390,7 +393,7 @@ $hover-transition-duration: 0.6s;
     }
 
     .color-this-employer {
-        background: #e9f4e8;
+        background: $employer-green;
         padding: 5px;
         border-radius: 5px;
         border: 1px solid;
@@ -398,7 +401,7 @@ $hover-transition-duration: 0.6s;
     }
 
     .color-this-employee {
-        background: #e0f7fa;
+        background: $employee-blue;
         padding: 5px;
         border-radius: 5px;
         border: 1px solid;

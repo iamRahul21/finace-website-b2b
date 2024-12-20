@@ -2,6 +2,7 @@
 @use "sass:color";
 
 $text-color: #123453;
+$green: #75a834;
 $hover-transition-duration: 0.3s;
 
 $grid-breakpoints: (
@@ -140,7 +141,7 @@ $grid-breakpoints: (
   }
 
   #new-demo-button {
-    background: #75a834;
+    background: $green;
     color: white;
     padding: 10px 15px;
     border-radius: 25px;

@@ -68,19 +68,6 @@ const UsefulLinks = () => {
                         Bangalore, India
                     </div>
                 </div>
-                {/* <div className="contact">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/fmasbomy.json"
-                        trigger="hover"
-                        stroke="bold"
-                        colors="primary:#121331,secondary:#7dac3e,tertiary:#ffffff"
-                        style={{ width: '50px', height: '50px' }}>
-                    </lord-icon>
-                    <div className="text">
-                        <h4>Call Us</h4>
-                        <span>1234567890</span>
-                    </div>
-                </div> */}
                 <div className="contact">
                     <lord-icon
                         src="https://cdn.lordicon.com/tdhnvcoq.json"

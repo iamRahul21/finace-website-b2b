@@ -1,4 +1,5 @@
 $bg-color: #123453;
+$green: #75a834;
 $text-color: white;
 
 .useful-section {
@@ -38,12 +39,12 @@ $text-color: white;
 }
 
 .text h4::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
 .text::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
@@ -65,17 +66,17 @@ span {
 }
 
 .Finace h1::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
 .Finace::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
 .right h4::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
@@ -95,7 +96,7 @@ span {
     align-items: center;
 }
 
-.links-list{
+.links-list {
     list-style-type: none;
     padding-left: 0px;
 }
@@ -114,16 +115,16 @@ span {
 
 .list-item:hover {
     cursor: pointer;
-    color: #75a834;
+    color: $green;
 }
 
 .links-list li a:hover {
     cursor: pointer;
-    color: #75a834;
+    color: $green;
 }
 
 .list-item::selection {
-    background-color: #75a834;
+    background-color: $green;
     color: #ffffff;
 }
 
@@ -134,6 +135,11 @@ span {
 
 .appstore img:hover {
     transform: scale(1.1);
+}
+
+.appstore img::selection {
+    background-color: $green;
+    color: #ffffff;
 }
 
 // Responsiveness

@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "sass:color";
+
+$blue: #123453;
+$green: #75a834;
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,7 +31,7 @@ body {
 
 .main-content h1 {
     text-align: center;
-    color: #123453;
+    color: $blue;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -37,7 +43,7 @@ p strong {
 
 .main-content h1::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .main-content h2 {
@@ -50,7 +56,7 @@ p strong {
 
 .main-content h2::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .main-content p {
@@ -59,18 +65,18 @@ p strong {
 
 .main-content p::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .main-content p strong::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 p ul li::selection,
 p ol li::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .table-of-contents {
@@ -110,7 +116,7 @@ p ol li::selection {
 
 .table-of-contents ul li a:hover {
     cursor: pointer;
-    color: #75a834;
+    color: $green;
     font-weight: 500;
     transition-duration: 500ms;
 }
@@ -118,7 +124,7 @@ p ol li::selection {
 .table-of-contents h3::selection,
 .table-of-contents ul li a::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .table-of-contents1 {
@@ -126,7 +132,7 @@ p ol li::selection {
 }
 
 .table-of-contents1 h3 {
-    color: #123453;
+    color: $blue;
     margin-top: 0;
     font-size: 18px;
     margin-bottom: 15px;
@@ -138,9 +144,9 @@ p ol li::selection {
     padding: 0;
 }
 
-.table-of-contents1 ul li {
-    // margin-bottom: 10px;
-}
+// .table-of-contents1 ul li {
+//     margin-bottom: 10px;
+// }
 
 .table-of-contents1 ul li a {
     text-decoration: underline !important;
@@ -156,7 +162,7 @@ p ol li::selection {
 .table-of-contents1 h3::selection,
 .table-of-contents1 ul li a::selection {
     color: white;
-    background-color: #75a834;
+    background-color: $green;
 }
 
 .back-to-top {
@@ -167,9 +173,9 @@ p ol li::selection {
 
 .back-to-top a {
     text-decoration: none;
-    color: #75a834;
+    color: $green;
     font-weight: 500;
-    border: 2px solid #75a834;
+    border: 2px solid $green;
     padding: 5px;
     border-radius: 4px;
 }
@@ -178,8 +184,8 @@ p ol li::selection {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    border: 2px solid #75a834;
-    background-color: #75a834;
+    border: 2px solid $green;
+    background-color: $green;
     padding: 5px;
     border-radius: 4px;
 }
@@ -232,7 +238,7 @@ p ol li::selection {
 
     .table-of-contents1 {
         background-color: #e9f4e8;
-        border: 1px solid #75a834;
+        border: 1px solid $green;
         border-radius: 10px;
         padding: 10px;
         padding-left: 25px;
