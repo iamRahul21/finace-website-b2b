@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'lord-icon-element';
 import './UsefulLinks.scss';
@@ -108,8 +108,8 @@ const UsefulLinks = () => {
                                 </a>
                             </li>
                             <li>
-                                <a className="list-item" href="/privacy-policy" aria-label="Go to Privacy Policy">
-                                    Privacy Policy
+                                <a className="list-item" aria-label="Go to Privacy Policy">
+                                    <Link to="/privacy-policy" aria-label="Navigate to Privacy Policy page">Privacy Policy</Link>
                                 </a>
                             </li>
                         </ul>
