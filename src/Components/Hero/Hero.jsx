@@ -1,5 +1,5 @@
-import React from 'react'
-import './Hero.scss'
+import React from 'react';
+import './Hero.scss';
 
 const Hero = () => {
     const scrollToRequestDemo = () => {
@@ -36,15 +36,27 @@ const Hero = () => {
         <div className="hero-section">
             <div className="hero-left">
                 <div className='hero-para-1'>
-                    <span class="line-one">Ace your Finances</span><br />
-                    <span class="line-two">
-                        with <span class="color">Finace</span>
+                    <span className="line-one">Ace your Finances</span><br />
+                    <span className="line-two">
+                        with <span className="color">Finace</span>
                     </span>
                 </div>
                 <div className="hero-para-2">Take control of your financial well-being! Start with Early Salary Access today as we bring you a complete suite of financial services tailored for your growth.</div>
                 <div className='button'>
-                    <div className="get-started" onClick={scrollToGetStarted}>Get Started</div>
-                    <div className="book-a-demo" onClick={scrollToRequestDemo}>Book a demo</div>
+                    <div 
+                        className="get-started" 
+                        onClick={scrollToGetStarted} 
+                        aria-label="Click to get started with Finace"
+                    >
+                        Get Started
+                    </div>
+                    <div 
+                        className="book-a-demo" 
+                        onClick={scrollToRequestDemo} 
+                        aria-label="Click to book a demo for Finace"
+                    >
+                        Book a demo
+                    </div>
                 </div>
                 <div className="hero-para-3">Discover how you can access your earned salary before month-end</div>
             </div>
@@ -56,10 +68,11 @@ const Hero = () => {
                     style={{
                         height: "80vh", width: "auto"
                     }}
+                    aria-label="Phone mockup displaying the Finace App"
                 />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

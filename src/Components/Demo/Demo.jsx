@@ -21,6 +21,7 @@ const Demo = () => {
         <h2>Request Demo</h2>
         <h2>Request Demo</h2>
       </div> */}
+
       <div className="content">
         <div className="demo-left">
           <h2 className="demo-h2">Are you ready to experience the power of Finace?</h2>
@@ -29,7 +30,13 @@ const Demo = () => {
           </p>
         </div>
         <div className="demo-right">
-          <a className="demo-btn" onClick={scrollToRequestDemo}>Book a Demo</a>
+          <button
+            className="demo-btn"
+            onClick={scrollToRequestDemo}
+            aria-label="Click to book a demo"
+          >
+            Book a Demo
+          </button>
         </div>
       </div>
     </div>

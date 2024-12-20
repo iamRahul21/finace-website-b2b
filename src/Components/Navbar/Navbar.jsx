@@ -18,7 +18,7 @@ const Navbar = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
@@ -58,26 +58,26 @@ const Navbar = () => {
 
   return (
     <header className="header">
-      <a href="/" className="logo">
-        <img src="\Logo.png" alt="Finace logo"  />
+      <a href="/" className="logo" aria-label="Navigate to home">
+        <img src="/Logo.png" alt="Finace logo" />
       </a>
 
-      <div
+      <button
         className={`burger-button ${isNavActive ? 'active' : ''}`}
         onClick={toggleNavbar}
+        aria-label="Toggle navigation menu"
       >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
-        <a href="/">Home</a>
-        <a onClick={scrollToGetStarted}>Services</a>
-        <Link to="/faq">FAQs</Link>
-        <a onClick={scrollToAboutUs}>About Us</a>
-        <a id='new-demo-button' onClick={scrollToRequestDemo}>Book a Demo</a>
-        {/* <DemoButton /> */}
+        <a href="/" aria-label="Navigate to home page">Home</a>
+        <a onClick={scrollToGetStarted} aria-label="Learn more about services offered by Finace">Services</a>
+        <Link to="/faq" aria-label="Navigate to Frequently Asked Questions page">FAQs</Link>
+        <a onClick={scrollToAboutUs} aria-label="Learn more about Finace">About Us</a>
+        <a id="new-demo-button" onClick={scrollToRequestDemo} aria-label="Book a demo with Finace">Book a Demo</a>
       </nav>
     </header>
   );

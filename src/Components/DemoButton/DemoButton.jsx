@@ -21,9 +21,13 @@ const DemoButton = () => {
   };
 
   return (
-    <div className='demo-button' onClick={scrollToRequestDemo}>
+    <button
+      className='demo-button'
+      onClick={scrollToRequestDemo}
+      aria-label="Click to book a demo"
+    >
       Book a Demo
-    </div>
+    </button>
   );
 };
 

@@ -54,8 +54,8 @@ const UsefulLinks = () => {
 
     return (
         <div className="useful-section">
-            <div className='contact-section'>
-                <div className="contact">
+            <div className="contact-section" aria-labelledby="contact-section">
+                <div className="contact" aria-labelledby="find-us">
                     <lord-icon
                         src="https://cdn.lordicon.com/tdtlrbly.json"
                         trigger="hover"
@@ -64,11 +64,11 @@ const UsefulLinks = () => {
                         style={{ width: '50px', height: '50px' }}
                     ></lord-icon>
                     <div className="text">
-                        <h4>Find Us</h4>
-                        Bangalore, India
+                        <h4 id="find-us" className="contact-heading">Find Us</h4>
+                        <p>Bangalore, India</p>
                     </div>
                 </div>
-                <div className="contact">
+                <div className="contact" aria-labelledby="mail-us">
                     <lord-icon
                         src="https://cdn.lordicon.com/tdhnvcoq.json"
                         trigger="hover"
@@ -77,27 +77,43 @@ const UsefulLinks = () => {
                         style={{ width: '50px', height: '50px' }}
                     ></lord-icon>
                     <div className="text">
-                        <h4>Mail Us</h4>
-                        finace.ops@gmail.com
+                        <h4 id="mail-us" className="contact-heading">Mail Us</h4>
+                        <p>finace.ops@gmail.com</p>
                     </div>
                 </div>
             </div>
 
             <div className="useful-links">
-                <div id='page9-about' className="Finace">
+                <div id="page9-about" className="Finace">
                     <h1>Finace</h1> is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join Finace for financial wellness like never before.
                 </div>
-                <div className='right'>
-                    <h4>Useful links</h4>
+                <div className="right">
+                    <h4>Useful Links</h4>
                     <hr style={{ borderWidth: '2px' }} />
-                    <div className="lists">
-                        <ul className='links-list'>
-                            <li><a onClick={scrollToHome} className="list-item">Home</a></li>
-                            <li><a onClick={scrollToServices} className="list-item">Services</a></li>
-                            <li><a onClick={scrollToContactUs} className="list-item">Contact Us</a></li>
-                            <li><a className="list-item"><Link to="/privacy-policy">Privacy Policy</Link></a></li>
+                    <nav aria-label="Useful links navigation">
+                        <ul className="links-list">
+                            <li>
+                                <button onClick={scrollToHome} className="list-item" aria-label="Go to Home section">
+                                    Home
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={scrollToServices} className="list-item" aria-label="Go to Services section">
+                                    Services
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={scrollToContactUs} className="list-item" aria-label="Go to Contact Us section">
+                                    Contact Us
+                                </button>
+                            </li>
+                            <li>
+                                <a className="list-item" href="/privacy-policy" aria-label="Go to Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                            </li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>

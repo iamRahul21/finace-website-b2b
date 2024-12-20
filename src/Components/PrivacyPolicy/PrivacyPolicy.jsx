@@ -32,26 +32,27 @@ const PrivacyPolicy = () => {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
-    <section id='privacy'>
+    <section id="privacy">
       <Navbar />
       <div className="privacy-container">
-        <div className="table-of-contents">
-          <h3>Contents</h3>
+        <div className="table-of-contents" aria-labelledby="contents-heading">
+          <h3 id="contents-heading">Contents</h3>
           <ul>
             <li>
-              <a onClick={() => scrollToSection('section1')}>Introduction</a>
+              <a onClick={() => scrollToSection('section1')} aria-label="Navigate to Introduction section">Introduction</a>
             </li>
             <li>
-              <a onClick={() => scrollToSection('section2')}>
+              <a onClick={() => scrollToSection('section2')} aria-label="Navigate to Collection, processing, disclosure, and sharing of Information section">
                 Collection, processing, disclosure, and sharing of Information.
               </a>
             </li>
             <li>
-              <a onClick={() => scrollToSection('section3')}>Information Usage</a>
+              <a onClick={() => scrollToSection('section3')} aria-label="Navigate to Information Usage section">Information Usage</a>
             </li>
             <li>
-              <a onClick={() => scrollToSection('section4')}>
+              <a onClick={() => scrollToSection('section4')} aria-label="Navigate to Mechanism for Grievance Redressal section">
                 Mechanism for Grievance Redressal
               </a>
             </li>
@@ -68,25 +69,25 @@ const PrivacyPolicy = () => {
             <h3>Contents</h3>
             <ul>
               <li>
-                <a onClick={() => scrollToSection('section1')}>Introduction</a>
+                <a onClick={() => scrollToSection('section1')} aria-label="Navigate to Introduction section">Introduction</a>
               </li>
               <li>
-                <a onClick={() => scrollToSection('section2')}>
+                <a onClick={() => scrollToSection('section2')} aria-label="Navigate to Collection, processing, disclosure, and sharing of Information section">
                   Collection, processing, disclosure, and sharing of Information.
                 </a>
               </li>
               <li>
-                <a onClick={() => scrollToSection('section3')}>Information Usage</a>
+                <a onClick={() => scrollToSection('section3')} aria-label="Navigate to Information Usage section">Information Usage</a>
               </li>
               <li>
-                <a onClick={() => scrollToSection('section4')}>
+                <a onClick={() => scrollToSection('section4')} aria-label="Navigate to Mechanism for Grievance Redressal section">
                   Mechanism for Grievance Redressal
                 </a>
               </li>
             </ul>
           </div>
           <hr />
-          <h2 id="section1">Introduction</h2>
+          <h2 id="section1" aria-label="Introduction section">Introduction</h2>
           <p>
             Befinace Technologies Private Limited (hereinafter referred to as “the Company”), through its Mobile
             Application called “Finace” runs an employee financial wellness platform that allows the employee users
@@ -109,7 +110,7 @@ const PrivacyPolicy = () => {
             Policy or amendments thereof.
           </p>
 
-          <h2 id="section2">Collection, processing, disclosure, and sharing of Information.</h2>
+          <h2 id="section2" aria-label="Collection, processing, disclosure, and sharing of Information section">Collection, processing, disclosure, and sharing of Information.</h2>
           <p>
             <ul>
               <li>
@@ -168,7 +169,7 @@ const PrivacyPolicy = () => {
             </ul>
           </p>
 
-          <h2 id="section3">Information Usage</h2>
+          <h2 id="section3" aria-label="Information Usage section">Information Usage</h2>
           <p>
             Finace may use your Information for:
             <ol>
@@ -182,7 +183,7 @@ const PrivacyPolicy = () => {
             </ol>
           </p>
 
-          <h2 id="section4">Mechanism for Grievance Redressal</h2>
+          <h2 id="section4" aria-label="Mechanism for Grievance Redressal section">Mechanism for Grievance Redressal</h2>
           <p>
             In accordance with the Information Technology Act, 2000 and Rules made thereunder, the contact details
             for raising grievances, if any are provided below:
@@ -191,10 +192,9 @@ const PrivacyPolicy = () => {
             Address: 305 B Block, Parasmani Regency, 2nd Block Jayanagar, Bangalore, India, 560011
           </p>
           <div className="back-to-top">
-            <a href="#top">Back to top ↑</a>
+            <a href="#top" aria-label="Back to top">Back to top ↑</a>
           </div>
         </div>
-
       </div>
       <RequestDemo />
       <UsefulLinks />

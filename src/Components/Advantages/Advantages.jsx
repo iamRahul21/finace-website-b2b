@@ -1,5 +1,5 @@
-import React from 'react'
-import './Advantages.scss'
+import React from 'react';
+import './Advantages.scss';
 
 const Advantages = () => {
     return (
@@ -8,97 +8,133 @@ const Advantages = () => {
 
             <div className="benefit-container">
                 {/* Employer Benefits */}
-                <div id='hidden-employer'>
-                    <img src="/employer.svg" alt="Employer image" />
+                <div id="hidden-employer">
+                    <img src="/employer.svg" alt="Employer illustration" />
                 </div>
                 <div className="benefit-box employer">
                     <h3>Employer Benefits</h3>
-                    <div id='inside-employer'>
+                    <div id="inside-employer">
                         <img src="/employer.svg" alt="Employer Icon" />
                     </div>
                     <ul>
-                        <li><lord-icon
-                            className="icon"
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            trigger="loop"
-                            state="loop-cycle"
-                            style={{ width: '30px', height: '30px' }}
-                        ></lord-icon> Increased employee productivity</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                            style={{ width: '40px', height: '30px' }}
-                        ></lord-icon> Higher employee retention & savings on hiring</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                            style={{ width: '30px', height: '30px' }}
-                        ></lord-icon> Zero cost and seamless integration</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                            style={{ width: '30px', height: '30px' }}
-                        ></lord-icon> No risk and no liability</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                            style={{ width: '30px', height: '30px' }}
-                        ></lord-icon> No impact on cash flow/working capital</li>
+                        <li>
+                            <lord-icon
+                                className="icon"
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                trigger="loop"
+                                state="loop-cycle"
+                                style={{ width: '30px', height: '30px' }}
+                                aria-label="Increased employee productivity"
+                            ></lord-icon>
+                            Increased employee productivity
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                style={{ width: '40px', height: '30px' }}
+                                aria-label="Higher employee retention & savings on hiring"
+                            ></lord-icon>
+                            Higher employee retention & savings on hiring
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                style={{ width: '30px', height: '30px' }}
+                                aria-label="Zero cost and seamless integration"
+                            ></lord-icon>
+                            Zero cost and seamless integration
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                style={{ width: '30px', height: '30px' }}
+                                aria-label="No risk and no liability"
+                            ></lord-icon>
+                            No risk and no liability
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                style={{ width: '30px', height: '30px' }}
+                                aria-label="No impact on cash flow/working capital"
+                            ></lord-icon>
+                            No impact on cash flow/working capital
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <img id='hide-employer' src="/employer.svg" alt="Employer image" />
+                    <img id="hide-employer" src="/employer.svg" alt="Employer illustration" />
                 </div>
             </div>
             <div className="benefit-container">
-                <div id='employee-img'>
-                    <img src="/employee.svg" alt="Employee image" />
+                <div id="employee-img">
+                    <img src="/employee.svg" alt="Employee illustration" />
                 </div>
 
                 {/* Employee Benefits */}
                 <div className="benefit-box employee">
                     <h3>Employee Benefits</h3>
-                    <div id='inside-employee'>
-                    <img src="/employee.svg" alt="Employee Icon" />
-                </div>
+                    <div id="inside-employee">
+                        <img src="/employee.svg" alt="Employee Icon" />
+                    </div>
                     <ul>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                        ></lord-icon> 0% interest</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                        ></lord-icon> Real-time access to earned wages</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                        ></lord-icon> Financial independence</li>
-                        <li><lord-icon
-                            src="https://cdn.lordicon.com/ymgusxed.json"
-                            className="icon"
-                            trigger="loop"
-                            state="loop-cycle"
-                        ></lord-icon> Financial educational tools</li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                aria-label="0% interest"
+                            ></lord-icon>
+                            0% interest
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                aria-label="Real-time access to earned wages"
+                            ></lord-icon>
+                            Real-time access to earned wages
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                aria-label="Financial independence"
+                            ></lord-icon>
+                            Financial independence
+                        </li>
+                        <li>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ymgusxed.json"
+                                className="icon"
+                                trigger="loop"
+                                state="loop-cycle"
+                                aria-label="Financial educational tools"
+                            ></lord-icon>
+                            Financial educational tools
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Advantages
+export default Advantages;
