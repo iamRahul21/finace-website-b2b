@@ -12,8 +12,11 @@ const Features = () => {
             <div class="container card-container">
                 <div class="card" id="card-1">
                     <div class="card__img">
-                        <lord-icon src="https://cdn.lordicon.com/iuqyhlid.json" trigger="hover"
-                            colors="primary:#9ccf60,secondary:#123453" style={{ width: "50px", height: "50px" }}>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/iuqyhlid.json"
+                            trigger="hover"
+                            colors="primary:#9ccf60,secondary:#123453"
+                            style={{ width: "50px", height: "50px" }}>
                         </lord-icon>
                     </div>
                     <h3 class="card__heading">Employee Mobile App</h3>
@@ -22,8 +25,12 @@ const Features = () => {
                 </div>
                 <div class="card" id="card-2">
                     <div class="card__img">
-                        <lord-icon src="https://cdn.lordicon.com/yaxbmvvh.json" trigger="hover" state="hover-unfold"
-                            colors="primary:#9ccf60,secondary:#9ccf60,tertiary:#123453" style={{ width: "50px", height: "50px" }}>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/yaxbmvvh.json"
+                            trigger="hover"
+                            state="hover-unfold"
+                            colors="primary:#9ccf60,secondary:#9ccf60,tertiary:#123453"
+                            style={{ width: "50px", height: "50px" }}>
                         </lord-icon>
                     </div>
                     <h3 class="card__heading">Employer Dashboard</h3>
@@ -32,8 +39,14 @@ const Features = () => {
                 </div>
                 <div class="card" id="card-3">
                     <div class="card__img">
-                        <lord-icon src="https://cdn.lordicon.com/drdlomqk.json" trigger="hover"
-                            colors="primary:#123453,secondary:#123453,tertiary:#9ccf60" style={{ width: "50px", height: "50px" }}>
+                        <lord-icon
+                            // src="https://cdn.lordicon.com/drdlomqk.json"
+                            // trigger="hover"
+                            // colors="primary:#123453,secondary:#123453,tertiary:#123453"
+                            src="https://cdn.lordicon.com/nvrrlies.json"
+                            trigger="hover"
+                            colors="primary:#123453,secondary:#123453,tertiary:#9ccf60,quaternary:#123453,quinary:#e8e230,senary:#f24c00"
+                            style={{ width: "50px", height: "50px" }}>
                         </lord-icon>
                     </div>
                     <h3 class="card__heading">Efficient Back-end</h3>
