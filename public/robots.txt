@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://finace-website-1.vercel.app/sitemap.xml
