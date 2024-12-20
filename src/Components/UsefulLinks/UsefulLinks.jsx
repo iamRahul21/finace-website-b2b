@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'lord-icon-element';
 import './UsefulLinks.scss';
@@ -93,19 +93,19 @@ const UsefulLinks = () => {
                     <nav aria-label="Useful links navigation">
                         <ul className="links-list">
                             <li>
-                                <button onClick={scrollToHome} className="list-item" aria-label="Go to Home section">
+                                <a onClick={scrollToHome} className="list-item" aria-label="Go to Home section">
                                     Home
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button onClick={scrollToServices} className="list-item" aria-label="Go to Services section">
+                                <a onClick={scrollToServices} className="list-item" aria-label="Go to Services section">
                                     Services
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button onClick={scrollToContactUs} className="list-item" aria-label="Go to Contact Us section">
+                                <a onClick={scrollToContactUs} className="list-item" aria-label="Go to Contact Us section">
                                     Contact Us
-                                </button>
+                                </a>
                             </li>
                             <li>
                                 <a className="list-item" href="/privacy-policy" aria-label="Go to Privacy Policy">
