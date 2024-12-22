@@ -1,6 +1,8 @@
-# Finace-Website
+# Finace-Website 
 
 **Finace** is a revolutionary platform that empowers employees to access their earned wages in real-time and take control of their finances. Employers can benefit from heightened employee engagement, productivity, and an analytical dashboard providing real-time data. Join **Finace** for financial wellness like never before.
+
+Website is live at [Befinace](https://befinace.com/)
 
 ## Setup
 
@@ -35,7 +37,7 @@ Ensure you have the following installed on your machine:
 
    To start the development server, run:
    
-   ```bah
+   ```bash
    npm run dev
    ```
    or
@@ -43,7 +45,6 @@ Ensure you have the following installed on your machine:
    yarn dev
    ```
 
-This will start the Vite development server. You can now open your browser and go to http://localhost:5173/ to see the app in action.
+This will start the Vite development server and give you a localhost port to see the app in action.
 
 ---
-Developed by [Rahul Deka](https://rahul-deka.is-a.dev/).
