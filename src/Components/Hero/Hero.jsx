@@ -54,10 +54,7 @@ const Hero = () => {
     const heroRightAnimation = {
         initial: window.innerWidth <= 768 ? { y: 50, opacity: 0 } : { x: 50, opacity: 0 },
         animate: { x: 0, y: 0, opacity: 1 },
-        transition: {
-            duration: 1, // Slightly longer duration for smoother effect
-            ease: 'easeInOut', // Use a smoother easing function
-        },
+        transition: { duration: 0.7 }
     };
 
     return (
@@ -72,7 +69,7 @@ const Hero = () => {
                     className='hero-para-1'
                     initial={{ y: -50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.7, ease: 'easeOut' }}
+                    transition={{ duration: 0.7 }}
                 >
                     <span className="line-one">Ace your Finances</span><br />
                     <span className="line-two">
@@ -83,7 +80,7 @@ const Hero = () => {
                     className="hero-para-2"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                 >
                     Take control of your financial well-being! Start with Early Salary Access today as we bring you a complete suite of financial services tailored for your growth.
                 </motion.div>
@@ -117,7 +114,7 @@ const Hero = () => {
                     className="hero-para-3"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                 >
                     Discover how you can access your earned salary before month-end
                 </motion.div>
