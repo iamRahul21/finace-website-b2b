@@ -50,9 +50,8 @@ const Hero = () => {
         }
     };
 
-    // Determine the animation based on screen size
-    const heroRightAnimation = {
-        initial: window.innerWidth <= 768 ? { y: 50, opacity: 0 } : { x: 50, opacity: 0 },
+    const phoneMockupAnimation = {
+        initial: window.innerWidth <= 1024 ? { y: 50, opacity: 0 } : { x: 50, opacity: 0 },
         animate: { x: 0, y: 0, opacity: 1 },
         transition: { duration: 0.7 }
     };
@@ -121,7 +120,7 @@ const Hero = () => {
             </div>
             <motion.div 
                 className="hero-right"
-                {...heroRightAnimation}
+                {...phoneMockupAnimation}
             >
                 <img
                     src="/yes.svg"
