@@ -1,17 +1,48 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './Advantages.scss';
 
 const Advantages = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Animates only once
+        threshold: 0.2,    // Triggers when 20% of the component is in view
+    });
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
-        <section className="finance-advantage">
+        <motion.section 
+            className="finance-advantage"
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={containerVariants}
+            transition={{ duration: 0.6, ease: "linear" }}
+        >
             <h1>Experience the Finace Advantage</h1>
 
             <div className="benefit-container">
                 {/* Employer Benefits */}
-                <div id="hidden-employer">
+                <motion.div
+                    id="hidden-employer"
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    transition={{ duration: 0.6, ease: "linear" }}
+                >
                     <img src="/employer.svg" alt="Illustration of an employer" />
-                </div>
-                <div className="benefit-box employer">
+                </motion.div>
+                <motion.div
+                    className="benefit-box employer"
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    transition={{ duration: 0.6, ease: "linear" }}
+                >
                     <h3>Employer Benefits</h3>
                     <div id="inside-employer">
                         <img src="/employer.svg" alt="Employer Icon" />
@@ -73,18 +104,35 @@ const Advantages = () => {
                             No impact on cash flow/working capital
                         </li>
                     </ul>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    transition={{ duration: 0.6, ease: "linear" }}
+                >
                     <img id="hide-employer" src="/employer.svg" alt="Illustration of an employer" />
-                </div>
+                </motion.div>
             </div>
             <div className="benefit-container">
-                <div id="employee-img">
+                <motion.div
+                    id="employee-img"
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    transition={{ duration: 0.6, ease: "linear" }}
+                >
                     <img src="/employee.svg" alt="Illustration of an employee" />
-                </div>
+                </motion.div>
 
                 {/* Employee Benefits */}
-                <div className="benefit-box employee">
+                <motion.div
+                    className="benefit-box employee"
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    transition={{ duration: 0.6, ease: "linear" }}
+                >
                     <h3>Employee Benefits</h3>
                     <div id="inside-employee">
                         <img src="/employee.svg" alt="Employee Icon" />
@@ -131,9 +179,9 @@ const Advantages = () => {
                             Financial educational tools
                         </li>
                     </ul>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
