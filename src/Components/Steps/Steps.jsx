@@ -1,8 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './Steps.scss';
 
 const Steps = () => {
     const iframeRef = useRef(null);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
 
     useEffect(() => {
         const observerCallback = (entries) => {
@@ -19,8 +25,8 @@ const Steps = () => {
         };
 
         const observer = new IntersectionObserver(observerCallback, {
-            root: null, // Use the viewport as the root
-            threshold: 0.5, // Trigger when 50% of the video is visible
+            root: null,
+            threshold: 0.5,
         });
 
         if (iframeRef.current) {
@@ -34,52 +40,76 @@ const Steps = () => {
         };
     }, []);
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    };
+
     return (
-        <section id="timeline">
-            <h1 className="steps-head" aria-label="Steps on how Finace works">How Finace Works</h1>
-            <p className="leader" aria-label="Introduction to the steps in using Finace platform">
+        <motion.section
+            id="timeline"
+            ref={ref}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={containerVariants}
+        >
+            <motion.h1
+                className="steps-head"
+                variants={itemVariants}
+                aria-label="Steps on how Finace works"
+            >
+                How Finace Works
+            </motion.h1>
+            <motion.p
+                className="leader"
+                variants={itemVariants}
+                aria-label="Introduction to the steps in using Finace platform"
+            >
                 With Finace, managing your finances has never been easier. Our platform works seamlessly in four simple steps:
-            </p>
+            </motion.p>
 
-            <ul className="demo-card-wrapper" role="list" aria-label="Steps to use Finace platform">
-                <li className="demo-card" role="listitem">
-                    <div className="head">
-                        <div className="number-box" aria-label="Step 1">
-                            01
+            <motion.ul
+                className="demo-card-wrapper"
+                role="list"
+                aria-label="Steps to use Finace platform"
+                variants={containerVariants}
+            >
+                {[
+                    'Employee requests earned pay on Finace',
+                    "Finace credits the earned salary instantly to the employee's account",
+                    "Finace reconciles the earned salary with your company's payroll",
+                    'Employers gain real-time insights into the financial analytics of the workforce, including earned wage access and employee turnover rates',
+                ].map((step, index) => (
+                    <motion.li
+                        className="demo-card"
+                        role="listitem"
+                        variants={itemVariants}
+                        key={index}
+                    >
+                        <div className="head">
+                            <div
+                                className="number-box"
+                                aria-label={`Step ${index + 1}`}
+                            >
+                                {`0${index + 1}`}
+                            </div>
+                            <h2>{step}</h2>
                         </div>
-                        <h2>Employee requests earned pay on Finace</h2>
-                    </div>
-                </li>
+                    </motion.li>
+                ))}
+            </motion.ul>
 
-                <li className="demo-card" role="listitem">
-                    <div className="head">
-                        <div className="number-box" aria-label="Step 2">
-                            02
-                        </div>
-                        <h2>Finace credits the earned salary instantly to the employee's account</h2>
-                    </div>
-                </li>
-
-                <li className="demo-card" role="listitem">
-                    <div className="head">
-                        <div className="number-box" aria-label="Step 3">
-                            03
-                        </div>
-                        <h2>Finace reconciles the earned salary with your company's payroll</h2>
-                    </div>
-                </li>
-
-                <li className="demo-card" role="listitem">
-                    <div className="head">
-                        <div className="number-box" aria-label="Step 4">
-                            04
-                        </div>
-                        <h2>Employers gain real-time insights into the financial analytics of the workforce, including earned wage access and employee turnover rates</h2>
-                    </div>
-                </li>
-            </ul>
-            {/* 
-            <iframe
+            {/* <motion.iframe
                 ref={iframeRef}
                 width="760"
                 height="415"
@@ -90,10 +120,9 @@ const Steps = () => {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 aria-label="Video explaining how Finace works"
-            >
-            </iframe> 
-            */}
-        </section>
+                variants={itemVariants}
+            ></motion.iframe> */}
+        </motion.section>
     );
 };
 
