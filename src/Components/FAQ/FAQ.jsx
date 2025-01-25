@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './FAQ.scss';
 import Navbar from '../Navbar/Navbar';
 import UsefulLinks from '../UsefulLinks/UsefulLinks';
@@ -9,10 +10,8 @@ const FAQ = () => {
     const updateScrollPadding = () => {
       const navbar = document.querySelector('.header');
       const faqHeader = document.querySelector('.faq-header');
-
       const navbarHeight = navbar ? navbar.offsetHeight : 0;
       const faqHeaderHeight = faqHeader ? faqHeader.offsetHeight : 0;
-
       const combinedHeight = navbarHeight + faqHeaderHeight + 50;
       document.documentElement.style.scrollPaddingTop = `${combinedHeight}px`;
     };
@@ -40,11 +39,22 @@ const FAQ = () => {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+  };
+
+  const staggeredItems = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.3 } },
+  };
+
   return (
     <section>
       <Navbar />
-
-      <header className="faq-header">
+      
+      <motion.header className="faq-header" initial="hidden" animate="visible" variants={fadeInUp}>
         <div className="faq-hover">
           <lord-icon
             src="https://cdn.lordicon.com/abhwievu.json"
@@ -55,8 +65,10 @@ const FAQ = () => {
             aria-label="Animated conversation icon"
           ></lord-icon>
         </div>
-        <div className="faq-header-text"><h1>Frequently Asked Questions</h1>
-          <p>Learn how to start using our product. Understand the key features</p></div>
+        <div className="faq-header-text">
+          <h1>Frequently Asked Questions</h1>
+          <p>Learn how to start using our product. Understand the key features</p>
+        </div>
         <div className="faq-hover-hidden">
           <lord-icon
             src="https://cdn.lordicon.com/abhwievu.json"
@@ -67,11 +79,11 @@ const FAQ = () => {
             aria-label="Animated conversation icon"
           ></lord-icon>
         </div>
-      </header>
+      </motion.header>
 
-      <div className="faq-containers">
+      <motion.div className="faq-containers" initial="hidden" animate="visible" variants={staggeredItems}>
         {activeTab === 'employer' && (
-          <aside className="sidebar" id="employerToC">
+          <motion.aside className="sidebar" id="employerToC" variants={fadeInUp}>
             <div className="toggle-buttons">
               <button
                 id="employerBtn"
@@ -97,17 +109,18 @@ const FAQ = () => {
               <ul>
                 <li><a href="#about-employer" onClick={() => scrollToSection('about-employer')} aria-label="Learn about Finace for Employers">About Finace</a></li>
                 <li><a href="#EWA-employer" onClick={() => scrollToSection('EWA-employer')} aria-label="Learn about Earned Wage Access for Employers">About Earned Wage Access</a></li>
-              </ul></div>
+              </ul>
+            </div>
             <div className="support-box">
               <strong>Still need support?</strong>
               <p>Contact our support team.</p>
               <p>Email: <a href="mailto:finace.ops@gmail.com" aria-label="Email Finace support">finace.ops@gmail.com</a></p>
             </div>
-          </aside>
+          </motion.aside>
         )}
 
         {activeTab === 'employee' && (
-          <aside className="sidebar" id="employeeToC">
+          <motion.aside className="sidebar" id="employeeToC" variants={fadeInUp}>
             <div className="toggle-buttons">
               <button
                 id="employerBtn"
@@ -140,13 +153,14 @@ const FAQ = () => {
               <p>Contact our support team.</p>
               <p>Email: <a href="mailto:finace.ops@gmail.com" aria-label="Email Finace support">finace.ops@gmail.com</a></p>
             </div>
-          </aside>
+          </motion.aside>
         )}
 
-        <main className="faq-content">
+        {/* EMPLOYER - ABOUT FINACE */}
+        <motion.main className="faq-content" initial="hidden" animate="visible" variants={staggeredItems}>
           {activeTab === 'employer' && (
             <section id="employerFaq">
-              <div className="faq-section">
+              <motion.div className="faq-section" variants={fadeInUp}>
                 <h2 id="about-employer">About Finace</h2>
                 <div
                   className={`faq-item ${openFaq === 0 ? 'open' : ''}`}
@@ -186,6 +200,7 @@ const FAQ = () => {
                     entire workforce.
                   </p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 2 ? 'open' : ''}`}
                   onClick={() => toggleFaq(2)}
@@ -204,6 +219,7 @@ const FAQ = () => {
                     regardless of their credit history or financial background.
                   </p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 3 ? 'open' : ''}`}
                   onClick={() => toggleFaq(3)}
@@ -219,6 +235,7 @@ const FAQ = () => {
                     educational resources to encourage better financial practices. You no longer have to deal
                     with predatory loans, complicated KYC procedures, and loan rejections.</p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 4 ? 'open' : ''}`}
                   onClick={() => toggleFaq(4)}
@@ -234,6 +251,7 @@ const FAQ = () => {
                     using your registered email or phone number on the Finace app.
                   </p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 5 ? 'open' : ''}`}
                   onClick={() => toggleFaq(5)}
@@ -251,6 +269,7 @@ const FAQ = () => {
                     Account Manager who will provide support and guidance every step of the way.
                   </p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 6 ? 'open' : ''}`}
                   onClick={() => toggleFaq(6)}
@@ -265,6 +284,7 @@ const FAQ = () => {
                   <p>The process typically takes between 1 to 4 weeks for a company to start offering Finace's
                     services to its employees.</p>
                 </div>
+
                 <div
                   className={`faq-item ${openFaq === 7 ? 'open' : ''}`}
                   onClick={() => toggleFaq(7)}
@@ -391,7 +411,10 @@ const FAQ = () => {
                   <p>You can reach Finace's customer support via our website and email. Email -
                     finace.ops@gmail.com</p>
                 </div>
+              </motion.div>
 
+              {/* EMPLOYER - ABOUT EWA */}
+              <motion.div className="faq-section" variants={fadeInUp}>
                 <h2 id="EWA-employer">About Earned Wage Access</h2>
                 <div
                   className={`faq-item ${openFaq === 15 ? 'open' : ''}`}
@@ -504,14 +527,15 @@ const FAQ = () => {
                   </div>
                   <p>Yes, employees can make multiple withdrawals in a month.</p>
                 </div>
-              </div>
+              </motion.div>
             </section>
           )}
 
+          {/* EMPLOYEE - ABOUT FINACE */}
           {activeTab === 'employee' && (
             <section id="employeeFaq">
-              <div className="faq-section">
-                <h2 id='about-employee'>About Finace</h2>
+              <motion.div className="faq-section" variants={fadeInUp}>
+                <h2 id="about-employee">About Finace</h2>
                 <div
                   className={`faq-item ${openFaq === 22 ? 'open' : ''}`}
                   onClick={() => toggleFaq(22)}
@@ -524,7 +548,7 @@ const FAQ = () => {
                     <span className="icon" aria-hidden="true">&#9654;</span>
                   </div>
                   <p>
-                    To access Finace's services, your company needs to partner with us. You can contact your HR
+                  To access Finace's services, your company needs to partner with us. You can contact your HR
                     team to find out if Finace’s services are available to you. If your company has not yet
                     partnered with Finace, you can initiate the conversation by visiting our website below and
                     looping in your HR team: www.befinace.com
@@ -641,8 +665,11 @@ const FAQ = () => {
                   </div>
                   <p>You can reach Finace's customer support via email. Email: finace.ops@gmail.com</p>
                 </div>
+              </motion.div>
 
-                <h2 id='EWA-employee'>About Earned Wage Access</h2>
+              {/* EMPLOYEE - ABOUT EWA */}
+              <motion.div className="faq-section" variants={fadeInUp}>
+                <h2 id="EWA-employee">About Earned Wage Access</h2>
                 <div
                   className={`faq-item ${openFaq === 30 ? 'open' : ''}`}
                   onClick={() => toggleFaq(30)}
@@ -735,21 +762,29 @@ const FAQ = () => {
                   </div>
                   <p>Yes, you can make multiple withdrawals in a month.</p>
                 </div>
-
-              </div>
+              </motion.div>
             </section>
           )}
           <div className="back-to-top">
-            <a href="#top">Back to top ↑</a>
+          <a
+              href="#"
+              aria-label="Back to top"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              Back to top ↑
+            </a>
           </div>
           {/* <div className="support-box-last">
               <strong>Still need support?</strong>
               <p>Contact our support team.</p>
               <p>Email: <a href="mailto:finace.ops@gmail.com">finace.ops@gmail.com</a></p>
             </div> */}
-        </main>
-      </div>
-      <UsefulLinks />
+        </motion.main>
+        <UsefulLinks />
+      </motion.div>
       <Footer />
     </section>
   );
