@@ -14,10 +14,9 @@ const RequestDemo = () => {
   });
   const [successMessage, setSuccessMessage] = useState(null);
 
-  // Hook to track when this section enters the viewport
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2, // Trigger when 20% of the section is visible
+    threshold: 0.2,
   });
 
   const handleChange = (e) => {
@@ -66,7 +65,6 @@ const RequestDemo = () => {
     }
   };
 
-  // Framer Motion animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -74,7 +72,7 @@ const RequestDemo = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        staggerChildren: 0.2, // Delay between child animations
+        staggerChildren: 0.2,
       },
     },
   };
