@@ -1,91 +1,222 @@
 .page-container {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    overflow: hidden;
-    background-color: #f9f9f9;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.head {
+  font-size: 60px;
+  margin-top: 75px;
+  font-weight: 700;
+  text-align: center;
+  color: #123453;
+}
+
+.head::selection {
+  color: white;
+  background-color: #75a834;
+}
+
+.subhead {
+  margin: 20px auto;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 60%;
+  color: #333;
+}
+
+.subhead::selection {
+  color: white;
+  background-color: #75a834;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.name-group {
+  display: flex;
+  gap: 20px;
+}
+
+label {
+  font-size: 13px;
+  color: #333;
+  display: block;
+}
+
+label::selection {
+  color: white;
+  background-color: #75a834;
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.required::selection {
+  color: white;
+  background-color: #75a834;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #b0b0b0;
+}
+
+.form-input::selection {
+  color: white;
+  background-color: #75a834;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #75a834;
+  outline: none;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #75a834;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  position: relative;
+}
+
+.submit-btn::selection {
+  color: white;
+  background-color: #123453;
+}
+
+/* Shimmer effect */
+.submit-btn.shimmer {
+  animation: shimmer 9s linear infinite;
+  background-image: linear-gradient(-70deg, 
+    rgba(255, 255, 255, 0) 46%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(255, 255, 255, 0.8) 52%, 
+    rgba(255, 255, 255, 0) 56%
+  );
+  background-size: 400% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 50%;
   }
-  
+  100% {
+    background-position: -200% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
   .head {
     font-size: 60px;
-    margin-top: 75px;
-    font-weight: 700;
-    text-align: center;
-    color: #123453;
+    margin-top: 50px;
   }
-  
+
   .subhead {
-    margin: 20px auto;
-    line-height: 1.5;
-    text-align: center; 
-    max-width: 60%; 
-    color: #333;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 90%;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .head {
+    font-size: 48px;
+    margin-top: 40px;
+  }
+
+  .subhead {
+    font-size: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .head {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .subhead {
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
   .form-container {
-    min-width: 320px;
-    margin: 20px auto;
-    max-width: 800px;
-    height: auto;
-    padding: 20px;
-    background-color: #fff; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  
-  /* Responsiveness */
-  @media (max-width: 1024px) {
-    .head {
-      font-size: 60px; 
-      margin-top: 50px;
-    }
-  
-    .subhead {
-      font-size: 22px;
-      margin-left: 10%;
-      margin-right: 10%;
-      max-width: 90%; 
-    }
-  
-    .form-container {
-      margin-left: 5%;
-      margin-right: 5%;
-      max-width: 90%; 
-    }
+
+  .form-input, .form-textarea {
+    font-size: 14px;
   }
-  
-  @media (max-width: 768px) {
-    .head {
-      font-size: 48px;
-      margin-top: 40px;
-    }
-  
-    .subhead {
-      font-size: 20px;
-      margin-left: 8%;
-      margin-right: 8%;
-    }
-  
-    .form-container {
-      margin: 10px auto;
-      padding: 15px; 
-    }
+
+  .name-group {
+    flex-direction: column;
+    gap: 0;
   }
-  
-  @media (max-width: 480px) {
-    .head {
-      font-size: 32px;
-      margin-top: 20px;
-    }
-  
-    .subhead {
-      font-size: 18px;
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  
-    .form-container {
-      padding: 10px;
-    }
-  }  
+
+  .submit-btn {
+    padding: 12px 20px;
+  }
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.success {
+  background-color: #75a834;
+  color: white;
+}
+
+.error {
+  background-color: #dc3545;
+  color: white;
+}
